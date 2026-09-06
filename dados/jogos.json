@@ -212,7 +212,10 @@
           "url": "https://equipefundev.itch.io/lindux"
         }
       ],
-      "embed": {},
+      "embed": {
+        "tipo": "itch-jogar",
+        "id": "19130409"
+      },
       "galeria": [],
       "video": "",
       "creditos": []
