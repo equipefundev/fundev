@@ -1,0 +1,313 @@
+{
+  "idiomaPadrao": "pt-BR",
+  "biblioteca": {
+    "limiteParaFiltros": 10,
+    "cabecalho": [
+      "pantany",
+      "tormenta-da-rosa",
+      "z-chaos",
+      "lindux"
+    ],
+    "destaques": [
+      "pantany",
+      "z-chaos",
+      "lindux",
+      "aventura-do-folclore"
+    ]
+  },
+  "vocabularioTags": {
+    "genero": {
+      "cor": "#A78BFA",
+      "fundo": "#2A2038"
+    },
+    "caracteristica": {
+      "cor": "#62C9E8",
+      "fundo": "#182C32"
+    },
+    "contexto": {
+      "cor": "#E58BB5",
+      "fundo": "#351E2B"
+    },
+    "proposito": {
+      "cor": "#E58B4B",
+      "fundo": "#38251A"
+    },
+    "disponivel": {
+      "cor": "#5EE6A8",
+      "fundo": "#19352A"
+    },
+    "desenvolvimento": {
+      "cor": "#E5B84B",
+      "fundo": "#382F19"
+    },
+    "arquivado": {
+      "cor": "#9B968C",
+      "fundo": "#292824"
+    }
+  },
+  "jogos": [
+    {
+      "id": "pantany",
+      "titulo": "Pantany",
+      "tipo": "independente",
+      "status": "disponivel",
+      "tags": [
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "educativo",
+            "en": "educational"
+          }
+        },
+        {
+          "categoria": "proposito",
+          "rotulo": {
+            "pt-BR": "projeto social",
+            "en": "social project"
+          }
+        }
+      ],
+      "ano": 2021,
+      "resumo": {
+        "pt-BR": "Educação ambiental sobre a preservação do Pantanal, em forma de jogo.",
+        "en": "Environmental education about preserving the Pantanal, as a game."
+      },
+      "descricao": {
+        "pt-BR": "Projeto criado para conscientizar sobre a preservação da natureza no Pantanal, usando jogos como ferramenta de educação ambiental. É o projeto social da Fundev.",
+        "en": "A project built to raise awareness about preserving nature in the Pantanal, using games as a tool for environmental education. It is Fundev's social project."
+      },
+      "capa": {
+        "arquivo": "assets/games/pantany.webp",
+        "largura": 1000,
+        "altura": 1000,
+        "cor": "#022F07"
+      },
+      "plataformas": [
+        {
+          "pt-BR": "Navegador",
+          "en": "Browser"
+        }
+      ],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Jogar no Game Jolt",
+            "en": "Play on Game Jolt"
+          },
+          "url": "https://gamejolt.com/games/pantany/649272"
+        }
+      ],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "z-chaos",
+      "titulo": "Z-Chaos",
+      "tipo": "independente",
+      "status": "disponivel",
+      "tags": [
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "sobrevivência",
+            "en": "survival"
+          }
+        },
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "TDS",
+            "en": "TDS"
+          }
+        }
+      ],
+      "ano": 2024,
+      "resumo": {
+        "pt-BR": "Sobreviva às hordas, troque de arma e encare chefes como Tautarus e Dípterus.",
+        "en": "Survive the hordes, swap weapons and face bosses like Tautarus and Dipterus."
+      },
+      "descricao": {
+        "pt-BR": "Um top-down shooter frenético de sobrevivência. Desvie, troque de arma e encare chefes como Tautarus e Dípterus até encontrar um lugar livre da infestação.",
+        "en": "A frantic top-down survival shooter. Dodge, swap weapons and face bosses like Tautarus and Dipterus until you find a place free of the infestation."
+      },
+      "capa": {
+        "arquivo": "assets/games/z-chaos.webp",
+        "largura": 630,
+        "altura": 500,
+        "cor": "#141313"
+      },
+      "plataformas": [
+        {
+          "pt-BR": "Navegador",
+          "en": "Browser"
+        }
+      ],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Jogar no itch.io",
+            "en": "Play on itch.io"
+          },
+          "url": "https://equipefundev.itch.io/z-chaos"
+        }
+      ],
+      "embed": {
+        "tipo": "itch-jogar",
+        "id": "13031257"
+      },
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "lindux",
+      "titulo": "Lindux",
+      "tipo": "independente",
+      "status": "disponivel",
+      "tags": [
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "puzzle",
+            "en": "puzzle"
+          }
+        },
+        {
+          "categoria": "caracteristica",
+          "rotulo": {
+            "pt-BR": "terminal",
+            "en": "terminal"
+          }
+        }
+      ],
+      "ano": 2025,
+      "resumo": {
+        "pt-BR": "Seu PC foi infectado. Digite comandos e retome o controle antes que o Caos vença.",
+        "en": "Your PC is infected. Type commands and take back control before Chaos wins."
+      },
+      "descricao": {
+        "pt-BR": "Seu PC foi infectado. Digite comandos no terminal para escanear ameaças, eliminar processos maliciosos e empurrar a barra de Controle antes que o Caos tome conta do sistema.",
+        "en": "Your PC is infected. Type terminal commands to scan for threats, kill malicious processes and push the Control bar up before Chaos takes over the system."
+      },
+      "capa": {
+        "arquivo": "assets/games/lindux.webp",
+        "largura": 1024,
+        "altura": 904,
+        "cor": "#140911"
+      },
+      "plataformas": [
+        {
+          "pt-BR": "Navegador",
+          "en": "Browser"
+        }
+      ],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Jogar no itch.io",
+            "en": "Play on itch.io"
+          },
+          "url": "https://equipefundev.itch.io/lindux"
+        }
+      ],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "tormenta-da-rosa",
+      "titulo": "Tormenta da Rosa",
+      "tipo": "independente",
+      "status": "disponivel",
+      "tags": [
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "fantasia sombria",
+            "en": "dark fantasy"
+          }
+        }
+      ],
+      "ano": 2025,
+      "resumo": {
+        "pt-BR": "Projeto autoral com visual inteiramente desenhado à mão.",
+        "en": "An original project with fully hand-drawn art."
+      },
+      "descricao": {
+        "pt-BR": "Projeto autoral da Fundev com clima sombrio e visual inteiramente desenhado à mão. Disponível para Android na Google Play.",
+        "en": "An original Fundev project with a dark mood and fully hand-drawn art. Available for Android on Google Play."
+      },
+      "capa": {
+        "arquivo": "assets/games/tormenta-da-rosa.webp",
+        "largura": 1200,
+        "altura": 675,
+        "cor": "#01231E"
+      },
+      "plataformas": [
+        {
+          "pt-BR": "Android",
+          "en": "Android"
+        }
+      ],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Baixar na Google Play",
+            "en": "Get it on Google Play"
+          },
+          "url": "https://play.google.com/store/apps/details?id=com.elementares.arosadesangue"
+        }
+      ],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "aventura-do-folclore",
+      "titulo": "A Aventura do Folclore",
+      "tipo": "independente",
+      "status": "desenvolvimento",
+      "tags": [
+        {
+          "categoria": "genero",
+          "rotulo": {
+            "pt-BR": "minijogo",
+            "en": "mini-game"
+          }
+        },
+        {
+          "categoria": "caracteristica",
+          "rotulo": {
+            "pt-BR": "acessibilidade",
+            "en": "accessibility"
+          }
+        }
+      ],
+      "ano": null,
+      "resumo": {
+        "pt-BR": "Folclore brasileiro em quatro minijogos, pensados para crianças autistas.",
+        "en": "Brazilian folklore across four mini-games, designed for autistic children."
+      },
+      "descricao": {
+        "pt-BR": "Uma coletânea inspirada no folclore brasileiro, criada especialmente para crianças autistas. Reúne quatro minijogos: Jogo da Memória, Jogo Motor, Jogo das Emoções e Crie seu Personagem.",
+        "en": "A collection inspired by Brazilian folklore, made specifically for autistic children. It brings together four mini-games: Memory, Motor, Emotions and Create your Character."
+      },
+      "capa": {
+        "arquivo": "assets/games/aventura-do-folclore.webp",
+        "largura": 1200,
+        "altura": 675,
+        "cor": "#2F3013"
+      },
+      "plataformas": [],
+      "links": [],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    }
+  ]
+}

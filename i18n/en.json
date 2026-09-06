@@ -1,0 +1,102 @@
+{
+  "nome": "English",
+  "htmlLang": "en",
+  "ogLocale": "en_US",
+  "meta": {
+    "titulo": "Fundev | Game studio",
+    "descricao": "Game studio founded in 2024. Original games, social impact projects and custom software development."
+  },
+  "nav": {
+    "sobre": "About",
+    "equipe": "Team",
+    "jogos": "Games",
+    "cta": "Get in touch",
+    "abrirMenu": "Open menu",
+    "fecharMenu": "Close menu",
+    "idioma": "Language"
+  },
+  "hero": {
+    "eyebrow": "since 2024",
+    "titulo": "Games with a <span class=\"flicker-text\">flame</span> of their own.",
+    "sub": "Brazilian game studio since 2024. We make original titles and use games to talk about environmental preservation and accessibility.",
+    "ctaJogos": "See our games",
+    "destaqueHero": "Some of our games"
+  },
+  "sobre": {
+    "eyebrow": "what drives us",
+    "titulo": "Fun with a purpose.",
+    "sub": "Fundev started in 2024 with a simple idea: games can entertain and, at the same time, tell stories that matter. That is why, alongside our original titles, we keep projects focused on environmental preservation and accessibility.",
+    "card1Titulo": "Original games",
+    "card1Texto": "We build our own worlds, mechanics and stories, from the idea on paper to the first playable build.",
+    "card2Titulo": "Social impact",
+    "card2Texto": "<strong>Pantany</strong>, our social project, uses games to talk about preserving the Pantanal, one of the richest and most threatened biomes in Brazil.",
+    "card3Titulo": "Accessibility",
+    "card3Texto": "<strong>A Aventura do Folclore</strong> is being built for autistic children in Mato Grosso, designed from the start to include.",
+    "card4Titulo": "Custom software",
+    "card4Texto": "We are taking our first steps beyond games, building software to order: digital solutions designed from scratch for each project."
+  },
+  "equipe": {
+    "eyebrow": "who keeps the flame",
+    "titulo": "The team",
+    "sub": "A small team, obsessed with making good games.",
+    "erro": "The team could not be loaded right now."
+  },
+  "jogos": {
+    "eyebrow": "portfolio",
+    "titulo": "Our games",
+    "sub": "Some of the projects we have put into the world, and others still catching fire.",
+    "erro": "The games could not be loaded right now. Reload the page to try again.",
+    "vazio": "No games in this category.",
+    "filtroTodos": "All",
+    "destaques": "Featured",
+    "destaqueAnterior": "Previous featured game",
+    "destaqueProximo": "Next featured game",
+    "emBreve": "Coming soon",
+    "jogar": "Play",
+    "filtrosBotao": "Filter and search",
+    "buscaRotulo": "Search games by title",
+    "buscaPlaceholder": "Search by title or genre…",
+    "grupoTipo": "Type",
+    "grupoGenero": "Genre"
+  },
+  "tipos": {
+    "independente": "Original",
+    "parceria": "Client work"
+  },
+  "status": {
+    "disponivel": "available",
+    "desenvolvimento": "in development"
+  },
+  "modal": {
+    "fechar": "Close",
+    "avisoEmbed": "The game runs right here, served by itch.io."
+  },
+  "contato": {
+    "eyebrow": "let's talk?",
+    "titulo": "Get in touch",
+    "sub": "Got a project, an idea, or just want to talk about games? Say hi. We answer.",
+    "labelEmail": "Email",
+    "labelInstagram": "Instagram",
+    "labelItch": "itch.io",
+    "waTitulo": "Reach us on WhatsApp",
+    "waTexto": "It is the fastest way to reach us: projects, partnerships, or just to talk about games.",
+    "waBotao": "Message on WhatsApp"
+  },
+  "rodape": {
+    "copy": "Fundev. Indie studio since 2024"
+  },
+  "redes": {
+    "itch": "itch.io",
+    "steam": "Steam",
+    "epic": "Epic Games",
+    "googleplay": "Google Play",
+    "apple": "App Store",
+    "gamejolt": "Game Jolt",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "site": "Personal site",
+    "email": "Email"
+  }
+}

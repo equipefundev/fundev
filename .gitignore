@@ -1,0 +1,4 @@
+# ferramentas locais de desenvolvimento — nao vao para o site publicado
+.dev/
+.claude/
+node_modules/

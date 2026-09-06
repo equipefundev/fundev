@@ -1,0 +1,27 @@
+{
+  "contato": {
+    "email": "equipefundev@gmail.com",
+    "whatsapp": {
+      "numero": "5512997972700",
+      "mensagem": {
+        "pt-BR": "Olá, vim pelo site da Fundev!",
+        "en": "Hi, I came from the Fundev site!"
+      }
+    }
+  },
+  "redes": {
+    "instagram": "https://www.instagram.com/equipefundev/",
+    "itch": "https://equipefundev.itch.io",
+    "discord": "",
+    "youtube": "",
+    "steam": "",
+    "epic": "",
+    "gamejolt": "",
+    "linkedin": "",
+    "github": ""
+  },
+  "logos": {
+    "padrao": "assets/logo.png",
+    "sazonais": []
+  }
+}

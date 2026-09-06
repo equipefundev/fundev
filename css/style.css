@@ -1,31 +1,96 @@
 /* ==========================================================================
-   FUNDEV — design tokens
+   Mapa de cores
+
+   Toda cor do site nasce de uma tripla RGB aqui. As variações com
+   transparência são compostas a partir dela, então trocar de tema é redefinir
+   as triplas e nada mais. Para testar no console:
+     document.documentElement.dataset.tema = "lindux"
+     delete document.documentElement.dataset.tema
    ========================================================================== */
 :root{
-  --bg-void:     #12100D;
-  --bg-panel:    #1C1812;
-  --bg-panel-2:  #241E16;
-  --line:        #332B21;
+  /* superfícies, do fundo para a frente */
+  --rgb-fundo:        18 16 13;
+  --rgb-painel:       28 24 18;
+  --rgb-painel-2:     36 30 22;
+  --rgb-borda:       121 102 78;
 
-  --ember:       #FF6A3D;
-  --ember-deep:  #C6421A;
-  --ember-light: #FFC17A;
-  --pantanal:    #4C9169;
-  --pantanal-deep:#2F5A41;
+  /* acento da marca */
+  --rgb-acento:      255 106 61;
+  --rgb-acento-forte:198 66 26;
+  --rgb-acento-claro:255 193 122;
 
-  --ink:         #F3ECDD;
-  --ink-muted:   #B9AE9B;
-  --ink-faint:   #8C8171;
+  /* texto, do mais forte ao mais apagado */
+  --rgb-tinta:       243 236 221;
+  --rgb-tinta-media: 185 174 155;
+  --rgb-tinta-fraca: 140 129 113;
+
+  /* verde do WhatsApp: marca de terceiro, não acompanha o tema */
+  --rgb-whatsapp:     37 211 102;
+
+  /* nomes usados nas regras */
+  --bg-void:     rgb(var(--rgb-fundo));
+  --bg-panel:    rgb(var(--rgb-painel));
+  --bg-panel-2:  rgb(var(--rgb-painel-2));
+  --line:        rgb(var(--rgb-borda));
+
+  --ember:       rgb(var(--rgb-acento));
+  --ember-deep:  rgb(var(--rgb-acento-forte));
+  --ember-light: rgb(var(--rgb-acento-claro));
+
+  --ink:         rgb(var(--rgb-tinta));
+  --ink-muted:   rgb(var(--rgb-tinta-media));
+  --ink-faint:   rgb(var(--rgb-tinta-fraca));
+
+  /* véus e brilhos, derivados das bases acima */
+  --veu-nav:     rgb(var(--rgb-fundo) / 82%);
+  --veu-modal:   rgb(var(--rgb-fundo) / 88%);
+  --veu-vidro:   rgb(var(--rgb-fundo) / 72%);
+  --acento-tenue:rgb(var(--rgb-acento) / 14%);
+  --acento-halo: rgb(var(--rgb-acento) / 55%);
+  --sobre-acento:rgb(var(--rgb-fundo) / 92%);   /* texto sobre o botão de acento */
 
   --font-display: 'Baloo 2', ui-rounded, sans-serif;
   --font-body:    'Manrope', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  /* Movimento: curva desacelerada, sem overshoot. Nada salta. */
+  --ease-suave: cubic-bezier(.22, .61, .36, 1);
+  --dur-curta:  200ms;
+  --dur-media:  340ms;
+  --dur-longa:  620ms;
 
   --radius-sm: 10px;
   --radius-md: 18px;
   --radius-lg: 28px;
 
   --container: 1180px;
+}
+
+/* Temas alternativos: só as triplas mudam. */
+[data-tema="lindux"]{
+  --rgb-fundo:        11 15 20;
+  --rgb-painel:       18 25 33;
+  --rgb-painel-2:     24 33 43;
+  --rgb-borda:        74 100 120;
+  --rgb-acento:       98 201 232;
+  --rgb-acento-forte: 34 122 154;
+  --rgb-acento-claro:168 227 245;
+  --rgb-tinta:       226 238 245;
+  --rgb-tinta-media: 160 178 190;
+  --rgb-tinta-fraca: 118 136 149;
+}
+
+[data-tema="pantanal"]{
+  --rgb-fundo:        13 20 15;
+  --rgb-painel:       21 32 24;
+  --rgb-painel-2:     28 42 32;
+  --rgb-borda:        82 112 90;
+  --rgb-acento:       94 200 130;
+  --rgb-acento-forte: 40 122 74;
+  --rgb-acento-claro:170 232 190;
+  --rgb-tinta:       232 243 233;
+  --rgb-tinta-media: 170 190 175;
+  --rgb-tinta-fraca: 126 146 131;
 }
 
 *,*::before,*::after{ box-sizing: border-box; }
@@ -60,7 +125,7 @@ a{ color: inherit; text-decoration: none; }
 
 img{ max-width: 100%; display:block; }
 
-section{ position: relative; padding: 100px 24px; }
+section{ position: relative; padding: 100px 24px; scroll-margin-top: 72px; }
 
 .section-head{
   max-width: 640px;
@@ -102,6 +167,7 @@ section{ position: relative; padding: 100px 24px; }
    Buttons
    ========================================================================== */
 .btn{
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -112,16 +178,18 @@ section{ position: relative; padding: 100px 24px; }
   border-radius: 999px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  transition: transform var(--dur-media) var(--ease-suave), box-shadow var(--dur-media) var(--ease-suave), background var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave);
 }
+
+
 .btn:hover{ transform: translateY(-2px); }
 
 .btn-primary{
   background: linear-gradient(135deg, var(--ember) 0%, var(--ember-deep) 100%);
-  color: #1A0D06;
-  box-shadow: 0 10px 24px -8px rgba(255,106,61,.55);
+  color: var(--sobre-acento);
+  box-shadow: 0 10px 24px -8px var(--acento-halo);
 }
-.btn-primary:hover{ box-shadow: 0 14px 28px -8px rgba(255,106,61,.7); }
+.btn-primary:hover{ box-shadow: 0 14px 28px -8px rgb(var(--rgb-acento) / 70%); }
 
 .btn-ghost{
   background: transparent;
@@ -148,6 +216,163 @@ section{ position: relative; padding: 100px 24px; }
 }
 .btn-disabled:hover{ transform:none; }
 
+/* Com o deslocamento de volta, a faixa volta junto: o elemento sobe e foge do
+   cursor parado na borda, derrubando o :hover em loop. A faixa recebe o
+   deslocamento inverso, entao a area sensivel fica parada. */
+.value-card::after,
+.game-card::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(100% - 6px);
+  height: 18px;
+  transition: transform var(--dur-media) var(--ease-suave);
+}
+.value-card:hover::after,
+.game-card:hover::after{ transform: translateY(3px); }
+
+.rede::after,
+.btn::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(100% - 4px);
+  height: 10px;
+  transition: transform var(--dur-media) var(--ease-suave);
+}
+.rede:hover::after,
+.btn:hover::after{ transform: translateY(2px); }
+
+/* Luz de brasa seguindo o ponteiro. E o que da vida sem mover nada: a fonte
+   de luz acompanha a mao em vez do card sacudir. */
+.card-luz{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(220px circle at var(--lx, 50%) var(--ly, 50%),
+    rgb(var(--rgb-acento) / 16%), rgb(var(--rgb-acento) / 0%) 66%);
+  transition: opacity var(--dur-media) var(--ease-suave);
+}
+.game-card:hover .card-luz{ opacity: 1; }
+.game-body{ position: relative; z-index: 1; }
+
+/* Onda ao clicar, saindo do ponto do ponteiro. A area de recorte e um
+   elemento proprio: recortar no botao cortaria tambem a faixa anti-tremor,
+   que precisa passar da borda de baixo. */
+.onda-area{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+}
+.onda{
+  position: absolute;
+  width: 10px; height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(var(--rgb-acento-claro) / 55%), rgb(var(--rgb-acento) / 0%) 70%);
+  transform: scale(0);
+  animation: onda 600ms var(--ease-suave) forwards;
+}
+@keyframes onda{
+  to{ transform: scale(26); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce){ .onda{ display: none; } }
+
+/* ==========================================================================
+   Contorno de brasa
+
+   Substitui o deslocamento no hover. A borda acende de baixo para cima, como
+   brasa pegando na quina, e nada muda de lugar. O gradiente vira contorno por
+   máscara: pinta a caixa toda e recorta o miolo, sobrando 1px de borda.
+   ========================================================================== */
+.game-card, .value-card,
+.btn-ghost, .btn-play, .filtros-botao, .filtro-aba,
+.rede, .destaque-seta, .nav-cta, .idioma-select{
+  position: relative;
+}
+
+.game-card::before, .value-card::before,
+.btn-ghost::before, .btn-play::before, .filtros-botao::before, .filtro-aba::before,
+.rede::before, .destaque-seta::before, .nav-cta::before{
+  content: "";
+  position: absolute;
+  /* -1px porque o inset de um filho absoluto resolve contra a caixa de
+     padding: com 0 o anel cairia por dentro da borda e formaria linha dupla. */
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to top,
+    rgb(var(--rgb-acento)) 0%,
+    rgb(var(--rgb-acento-claro) / 55%) 34%,
+    rgb(var(--rgb-acento) / 0%) 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur-media) var(--ease-suave);
+  pointer-events: none;
+}
+
+.game-card:hover::before, .value-card:hover::before, .team-card:hover::before,
+.btn-ghost:hover::before, .btn-play:hover::before, .filtros-botao:hover::before,
+.filtro-aba:hover::before, .rede:hover::before, .destaque-seta:hover::before,
+.nav-cta:hover::before,
+.game-card:focus-within::before, .btn-ghost:focus-visible::before,
+.btn-play:focus-visible::before, .filtros-botao:focus-visible::before,
+.filtro-aba:focus-visible::before, .rede:focus-visible::before,
+.destaque-seta:focus-visible::before, .nav-cta:focus-visible::before{
+  opacity: 1;
+}
+
+/* Halo externo, curto e baixo: dá presença sem virar néon. */
+.game-card, .value-card, .btn, .rede, .filtros-botao, .destaque-seta{
+  transition: transform var(--dur-media) var(--ease-suave),
+              border-color var(--dur-media) var(--ease-suave),
+              box-shadow var(--dur-media) var(--ease-suave),
+              color var(--dur-curta) var(--ease-suave),
+              background-color var(--dur-curta) var(--ease-suave);
+}
+.game-card:hover, .value-card:hover, .btn-ghost:hover, .btn-play:hover,
+.filtros-botao:hover, .destaque-seta:hover, .rede:hover{
+  box-shadow: 0 0 28px -12px rgb(var(--rgb-acento) / 55%);
+}
+/* Nos botões cheios o contorno não cabe, então o halo é que responde. */
+.btn-primary:hover{ box-shadow: 0 0 34px -10px rgb(var(--rgb-acento) / 70%); }
+.btn-whatsapp:hover{ box-shadow: 0 0 34px -10px rgb(var(--rgb-whatsapp) / 60%); }
+
+/* A capa respira devagar. É a única coisa que ainda se move, e por dentro do
+   recorte do card, então não empurra nada. */
+.game-cover img, .destaque-arte img{
+  transition: transform var(--dur-longa) var(--ease-suave);
+}
+.game-card:hover .game-cover img,
+.destaque-slide:hover .destaque-arte img{ transform: scale(1.04); }
+
+/* Entrada ao rolar. A classe só é aplicada por JS: sem JS nada fica invisível. */
+.entra{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-longa) var(--ease-suave),
+              transform var(--dur-longa) var(--ease-suave);
+}
+.entra.visivel{ opacity: 1; transform: none; }
+/* Some ao passar para cima: alivia a tela e da continuidade a rolagem. */
+.entra.saiu{ opacity: .18; transform: translateY(-10px); }
+
+@media (prefers-reduced-motion: reduce){
+  .entra, .entra.saiu{ opacity: 1; transform: none; }
+  .card-luz{ display: none; }
+  .game-card:hover .game-cover img,
+  .destaque-slide:hover .destaque-arte img{ transform: none; }
+}
+
 /* ==========================================================================
    Nav
    ========================================================================== */
@@ -155,7 +380,7 @@ section{ position: relative; padding: 100px 24px; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(18,16,13,.82);
+  background: var(--veu-nav);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -190,7 +415,7 @@ section{ position: relative; padding: 100px 24px; }
   font-weight: 600;
   font-size: .95rem;
   color: var(--ink-muted);
-  transition: color .15s ease;
+  transition: color var(--dur-curta) var(--ease-suave);
 }
 .nav-links a:hover{ color: var(--ink); }
 .nav-cta{
@@ -215,8 +440,11 @@ section{ position: relative; padding: 100px 24px; }
   display:block; height: 2px; width: 100%;
   background: var(--ink);
   border-radius: 2px;
-  transition: transform .2s ease, opacity .2s ease;
+  transition: transform var(--dur-curta) var(--ease-suave), opacity var(--dur-curta) var(--ease-suave);
 }
+.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
 /* ==========================================================================
    Hero
@@ -233,7 +461,7 @@ section{ position: relative; padding: 100px 24px; }
   top: -20%; right: -10%;
   width: 60vw; height: 60vw;
   max-width: 800px; max-height: 800px;
-  background: radial-gradient(circle, rgba(255,106,61,.22) 0%, rgba(255,106,61,0) 70%);
+  background: radial-gradient(circle, rgb(var(--rgb-acento) / 22%) 0%, rgb(var(--rgb-acento) / 0%) 70%);
   filter: blur(10px);
   z-index: 0;
 }
@@ -257,18 +485,45 @@ section{ position: relative; padding: 100px 24px; }
   animation: flicker 3.2s ease-in-out infinite;
 }
 @keyframes flicker{
-  0%,100%{ text-shadow: 0 0 22px rgba(255,106,61,.55); }
-  50%{ text-shadow: 0 0 8px rgba(255,106,61,.25); }
+  0%,100%{ text-shadow: 0 0 22px var(--acento-halo); }
+  50%{ text-shadow: 0 0 8px rgb(var(--rgb-acento) / 25%); }
 }
 .hero-sub{ font-size: 1.12rem; max-width: 54ch; }
 .hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
 
-.hero-flame{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* A chama continua sendo a assinatura, mas parou de ocupar o espaco mais caro
+   da pagina: quem ocupa agora sao os jogos. */
+.hero-mark{ width: 46px; height: auto; margin: 0 0 18px; display: block; }
+
+.hero-jogos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-content: center;
 }
-.flame-svg{ width: min(100%, 300px); height: auto; }
+.hero-capa{
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--cor-capa, var(--bg-panel));
+}
+.hero-capa::after{
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background: var(--capa) center / cover no-repeat;
+  filter: blur(24px) saturate(130%) brightness(.4);
+  -webkit-mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+          mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+}
+.hero-capa img{
+  position: relative;
+  z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
 .flame-body{
   transform-origin: 50% 100%;
   animation: flame-sway 2.6s ease-in-out infinite;
@@ -321,13 +576,14 @@ section{ position: relative; padding: 100px 24px; }
   gap: 22px;
 }
 .value-card{
+  position: relative;
   background: var(--bg-void);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 30px 26px;
-  transition: border-color .2s ease, transform .2s ease;
+  transition: border-color var(--dur-media) var(--ease-suave);
 }
-.value-card:hover{ border-color: var(--ember-deep); transform: translateY(-4px); }
+.value-card:hover{ border-color: rgb(var(--rgb-acento) / 45%); transform: translateY(-3px); }
 .value-card--nature:hover{ border-color: var(--pantanal); }
 .value-icon{ font-size: 1.8rem; margin-bottom: 14px; }
 .value-card h3{ font-size: 1.2rem; margin-bottom: 8px; }
@@ -372,7 +628,7 @@ section{ position: relative; padding: 100px 24px; }
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 700;
-  color: rgba(18,16,13,.85);
+  color: rgb(var(--rgb-fundo) / 85%);
   opacity: 0;
 }
 .team-photo.no-photo::after{ opacity: 1; }
@@ -389,48 +645,29 @@ section{ position: relative; padding: 100px 24px; }
 /* ==========================================================================
    Jogos
    ========================================================================== */
-.spotlight{
-  max-width: var(--container);
-  margin: 0 auto 40px;
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  align-items: stretch;
-  background: linear-gradient(120deg, var(--pantanal-deep) 0%, #1D3D2A 100%);
-  border: 1px solid var(--pantanal);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.spotlight-art{
-  position: relative;
-  min-height: 220px;
-  overflow: hidden;
-}
-.spotlight-img{
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.spotlight-content{ padding: 34px 38px; }
-.spotlight-content h3{ font-size: 1.7rem; margin: 10px 0 10px; }
-.spotlight-content p{ margin: 0 0 20px; max-width: 52ch; color: #D9E6DC; }
-.spotlight-btn{ background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3); color: #EAF5EE; }
-.spotlight-btn:hover{ background: rgba(255,255,255,.18); border-color: #fff; color: #fff; }
 
+/* Cor da categoria vem do vocabularioTags no JSON, via custom property. */
 .tag{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .05em;
-  padding: 5px 12px;
+  padding: 5px 12px 5px 10px;
   border-radius: 999px;
-  background: var(--bg-panel-2);
-  color: var(--ink-muted);
-  border: 1px solid var(--line);
+  background: var(--tag-fundo, var(--bg-panel-2));
+  color: var(--tag-cor, var(--ink-muted));
+  border: 1px solid var(--tag-cor, var(--line));
 }
-.tag-mono{ font-family: var(--font-mono); text-transform: none; letter-spacing: 0; }
-.tag-nature{ background: rgba(76,145,105,.15); color: #8FCBA6; border-color: var(--pantanal); }
-.tag-dev{ background: rgba(255,106,61,.14); color: var(--ember-light); border-color: var(--ember-deep); }
+/* carrega a leitura de cor mesmo com a pilula pequena */
+.tag-ponto{
+  flex: none;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
 
 .games-grid{
   max-width: var(--container);
@@ -440,44 +677,410 @@ section{ position: relative; padding: 100px 24px; }
   gap: 26px;
 }
 .game-card{
+  position: relative;
   background: var(--bg-panel);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color .2s ease, transform .2s ease;
+  transition: border-color var(--dur-media) var(--ease-suave);
 }
-.game-card:hover{ border-color: var(--ember-deep); transform: translateY(-4px); }
+.game-card:hover{ border-color: rgb(var(--rgb-acento) / 45%); transform: translateY(-3px); }
+
+/* A arte nunca e cortada: entra inteira sobre uma versao borrada dela mesma,
+   que preenche o slot. Com object-fit: cover uma capa quadrada perdia 44% da
+   altura, e o problema volta a cada arte de proporcao diferente. Assim o slot
+   aceita qualquer formato sem perder nada. */
 .game-cover{
+  position: relative;
   aspect-ratio: 16/9;
-  background: var(--bg-void);
+  background: var(--cor-capa, var(--bg-void));
   overflow: hidden;
+  border-radius: calc(var(--radius-md) - 1px) calc(var(--radius-md) - 1px) 0 0;
 }
-.game-cover img{ width: 100%; height: 100%; object-fit: cover; }
-.game-cover--placeholder{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  color: rgba(243,236,221,.35);
-  background:
-    repeating-linear-gradient(135deg, rgba(255,106,61,.06) 0 12px, transparent 12px 24px),
-    var(--bg-void);
+.game-cover::after{
+  content: "";
+  position: absolute;
+  inset: -10%;   /* passa da borda para o blur nao clarear a quina */
+  background: var(--capa) center / cover no-repeat;
+  filter: blur(30px) saturate(130%) brightness(.42);
+  /* desvanece nas bordas para o blur virar a cor predominante em vez de
+     terminar num corte visivel */
+  -webkit-mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+          mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+  z-index: 0;
 }
-.game-cover--nature{
-  background:
-    repeating-linear-gradient(135deg, rgba(76,145,105,.1) 0 12px, transparent 12px 24px),
-    var(--bg-void);
+.game-cover img{
+  position: relative;
+  z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: contain;
 }
+/* Quando a equipe quiser um recorte proposital, capa.foco no JSON manda. */
+.game-cover[data-foco] img{ object-fit: cover; object-position: var(--foco); }
+.game-cover[data-foco]::after{ display: none; }
 .game-body{ padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .game-tags{ display: flex; gap: 8px; flex-wrap: wrap; }
 .game-body h3{ font-size: 1.35rem; margin: 0; }
 .game-body p{ font-size: .95rem; flex: 1; }
-.game-body .btn{ align-self: flex-start; margin-top: 4px; }
+.game-meta{
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  color: var(--ink-faint);
+  margin: 0;
+}
+.game-acoes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.game-links{ display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn-jogar{ margin-left: auto; }
+
+/* ==========================================================================
+   Utilitarios
+   ========================================================================== */
+.sr-only{
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+body.sem-rolagem{ overflow: hidden; }
+.aviso-vazio{
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--ink-faint);
+  padding: 40px 0;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Seletor de idioma
+   ========================================================================== */
+.nav-idioma{ position: relative; }
+.idioma-botao{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.idioma-botao:hover, .idioma-botao.aberto{ color: var(--ink); border-color: rgb(var(--rgb-acento) / 55%); }
+.idioma-sigla{
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  letter-spacing: .08em;
+}
+
+.idioma-menu{
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 60;
+  min-width: 172px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 18px 40px -18px rgb(var(--rgb-fundo) / 90%);
+}
+.idioma-menu[hidden]{ display: none; }
+.idioma-opcao{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: .9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--dur-curta) var(--ease-suave), background var(--dur-curta) var(--ease-suave);
+}
+.idioma-opcao:hover{ background: var(--bg-panel-2); color: var(--ink); }
+.idioma-opcao.ativo{ color: var(--ember-light); }
+.idioma-opcao .idioma-sigla{ color: var(--ink-faint); min-width: 22px; }
+.idioma-opcao.ativo .idioma-sigla{ color: var(--ember-light); }
+
+/* ==========================================================================
+   Carrossel de destaques
+   ========================================================================== */
+.destaques{ max-width: var(--container); margin: 0 auto 34px; }
+.destaque-janela{
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+}
+.destaque-trilho{
+  display: flex;
+  transition: transform .45s cubic-bezier(.22,.61,.36,1);
+}
+@media (prefers-reduced-motion: reduce){
+  .destaque-trilho{ transition: none; }
+}
+.destaque-slide{
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: stretch;
+}
+.destaque-arte{ position: relative; overflow: hidden; max-height: 340px; background: var(--cor-capa, var(--bg-void)); }
+.destaque-arte::after{
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background: var(--capa) center / cover no-repeat;
+  filter: blur(30px) saturate(130%) brightness(.42);
+  -webkit-mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+          mask-image: radial-gradient(118% 94% at 50% 50%, #000 30%, transparent 100%);
+  z-index: 0;
+}
+.destaque-arte img{ position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; }
+.destaque-arte[data-foco] img{ object-fit: cover; object-position: var(--foco); }
+.destaque-arte[data-foco]::after{ display: none; }
+.destaque-texto{ padding: 34px 38px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.destaque-texto h3{ font-size: 1.8rem; margin: 0; }
+.destaque-texto p{ margin: 0; max-width: 46ch; }
+.destaque-texto .btn{ align-self: flex-start; margin-top: 6px; }
+
+.destaque-controles{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+.destaque-seta{
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--bg-panel-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+.destaque-seta:hover{ border-color: var(--ember); color: var(--ember-light); }
+.destaque-pontos{ display: flex; gap: 8px; }
+.destaque-ponto{
+  width: 9px; height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave);
+}
+.destaque-ponto.ativo{ background: var(--ember); border-color: var(--ember); }
+
+/* ==========================================================================
+   Busca e filtros
+   So aparecem acima de biblioteca.limiteParaFiltros no JSON.
+   ========================================================================== */
+.filtros{ max-width: var(--container); margin: 0 auto 24px; }
+.filtros-botao{
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .9rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--bg-panel-2);
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave), background var(--dur-curta) var(--ease-suave);
+}
+.filtros-botao:hover{ color: var(--ink); border-color: var(--ember); }
+.filtros-botao.aberto{
+  background: var(--acento-tenue);
+  border-color: var(--ember);
+  color: var(--ember-light);
+}
+
+.filtros-painel{
+  margin-top: 14px;
+  padding: 20px 22px;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filtros-painel[hidden]{ display: none; }
+
+.filtros-busca{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: .95rem;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: var(--bg-void);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.filtros-busca::placeholder{ color: var(--ink-faint); }
+.filtros-busca:focus{ outline: none; border-color: var(--ember); }
+
+.filtro-grupo{ display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.filtro-grupo-rotulo{
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  min-width: 68px;
+}
+.filtro-aba{
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .85rem;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave), background var(--dur-curta) var(--ease-suave);
+}
+.filtro-aba:hover{ color: var(--ink); border-color: var(--ember); }
+.filtro-aba.ativo{
+  background: var(--acento-tenue);
+  border-color: var(--ember);
+  color: var(--ember-light);
+}
+
+.filtro-aba{
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .88rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave), background var(--dur-curta) var(--ease-suave);
+}
+.filtro-aba:hover{ color: var(--ink); border-color: var(--ember); }
+.filtro-aba.ativo{
+  background: var(--acento-tenue);
+  border-color: var(--ember);
+  color: var(--ember-light);
+}
+
+/* ==========================================================================
+   Redes sociais da equipe (so aparecem se o campo estiver preenchido)
+   ========================================================================== */
+.redes{ display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+.rede{
+  position: relative;   /* ancora a faixa que impede o tremor */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  transition: color var(--dur-curta) var(--ease-suave), border-color var(--dur-media) var(--ease-suave);
+}
+.rede:hover{ color: var(--ember-light); border-color: rgb(var(--rgb-acento) / 55%); transform: translateY(-2px); }
+
+/* ==========================================================================
+   Modal do jogo
+   ========================================================================== */
+.modal{ position: fixed; inset: 0; z-index: 100; display: flex; }
+.modal[hidden]{ display: none; }
+.modal-fundo{ position: absolute; inset: 0; background: var(--veu-modal); backdrop-filter: blur(4px); }
+/* A caixa nao rola: quem rola e o corpo. Com a rolagem na caixa, o botao
+   fechar e as faiscas, que sao filhos absolutos dela, subiam junto com o
+   conteudo e sumiam. O overflow hidden tambem recorta o canvas nos cantos. */
+.modal-caixa{
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: min(940px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.modal-fechar{
+  position: absolute;
+  top: 14px; right: 14px;
+  z-index: 2;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--veu-vidro);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal-fechar:hover{ border-color: var(--ember); color: var(--ember-light); }
+
+/* Faiscas atras do conteudo: enfeitam a moldura sem disputar com o jogo. */
+.faiscas{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: .75;
+}
+.modal-corpo{
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.modal-corpo{ padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 14px; }
+.modal-titulo{ font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0; padding-right: 44px; }
+.modal-nota{
+  margin: 0;
+  font-size: .76rem;
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+}
+.modal-acoes{ display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ==========================================================================
+   Embeds (iframe so nasce no clique)
+   ========================================================================== */
+.embed{ display: flex; flex-direction: column; gap: 10px; }
+.embed-botao{ align-self: flex-start; }
+.embed-aviso{ margin: 0; font-size: .8rem; color: var(--ink-faint); font-family: var(--font-mono); }
+.embed-frame{
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-void);
+  display: block;
+}
 
 /* ==========================================================================
    Contato
@@ -488,7 +1091,7 @@ section{ position: relative; padding: 100px 24px; }
   bottom: -30%; left: -10%;
   width: 55vw; height: 55vw;
   max-width: 700px; max-height: 700px;
-  background: radial-gradient(circle, rgba(255,106,61,.16) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(var(--rgb-acento) / 16%) 0%, transparent 70%);
 }
 .contato-inner{
   position: relative;
@@ -504,9 +1107,20 @@ section{ position: relative; padding: 100px 24px; }
 .contato-text .eyebrow, .contato-text h2{ text-align: left; }
 
 .contact-list{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
-.contact-list li{ display: flex; gap: 12px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.contact-list li{ display: flex; gap: 12px; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.contact-icone{
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink-faint);
+}
+.contact-list li:hover .contact-icone{ color: var(--ember-light); border-color: var(--ember); }
 .contact-label{ font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); min-width: 90px; }
-.contact-list a{ font-weight: 600; transition: color .15s ease; }
+.contact-list a{ font-weight: 600; transition: color var(--dur-curta) var(--ease-suave); }
 .contact-list a:hover{ color: var(--ember-light); }
 
 .whatsapp-card{
@@ -521,23 +1135,17 @@ section{ position: relative; padding: 100px 24px; }
   margin: 0 auto 18px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(37,211,102,.14);
-  color: #25D366;
+  background: rgb(var(--rgb-whatsapp) / 14%);
+  color: rgb(var(--rgb-whatsapp));
 }
 .whatsapp-card h3{ font-size: 1.3rem; margin-bottom: 8px; }
 .whatsapp-card p{ font-size: .95rem; margin-bottom: 22px; }
 .btn-whatsapp{
-  background: #25D366;
-  color: #06210F;
-  box-shadow: 0 10px 24px -8px rgba(37,211,102,.5);
+  background: rgb(var(--rgb-whatsapp));
+  color: rgb(var(--rgb-fundo) / 92%);
+  box-shadow: 0 10px 24px -8px rgb(var(--rgb-whatsapp) / 50%);
 }
-.btn-whatsapp:hover{ box-shadow: 0 14px 28px -8px rgba(37,211,102,.65); }
-.whatsapp-note{
-  margin: 14px 0 0;
-  font-size: .74rem;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-}
+.btn-whatsapp:hover{ box-shadow: 0 14px 28px -8px rgb(var(--rgb-whatsapp) / 65%); }
 
 /* ==========================================================================
    Footer
@@ -569,7 +1177,14 @@ section{ position: relative; padding: 100px 24px; }
   .value-grid{ grid-template-columns: 1fr; }
   .team-grid{ grid-template-columns: 1fr; max-width: 360px; }
   .games-grid{ grid-template-columns: 1fr; }
-  .spotlight{ grid-template-columns: 1fr; }
+  .filtro-grupo{ align-items: flex-start; }
+  .filtro-grupo-rotulo{ flex: 0 0 100%; margin-bottom: 2px; }
+  .destaque-slide{ grid-template-columns: 1fr; }
+  .destaque-arte{ max-height: 220px; }
+  .destaque-texto{ padding: 26px 24px; }
+  .modal-caixa{ width: calc(100vw - 20px); max-height: calc(100vh - 24px); }
+  .modal-texto{ padding: 22px 22px 28px; }
+  .modal-fichas{ gap: 22px; }
   .contato-inner{ grid-template-columns: 1fr; gap: 36px; }
   .contato-text .section-sub, .contato-text .eyebrow, .contato-text h2{ text-align: center; }
   .contact-list{ align-items: center; }
@@ -594,5 +1209,4 @@ section{ position: relative; padding: 100px 24px; }
 
 @media (max-width: 480px){
   section{ padding: 70px 18px; }
-  .contact-form{ padding: 24px; }
 }

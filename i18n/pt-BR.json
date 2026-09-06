@@ -1,0 +1,102 @@
+{
+  "nome": "Português",
+  "htmlLang": "pt-BR",
+  "ogLocale": "pt_BR",
+  "meta": {
+    "titulo": "Fundev | Estúdio de jogos",
+    "descricao": "Estúdio de jogos criado em 2024. Jogos autorais, projetos de impacto social e desenvolvimento de software sob medida."
+  },
+  "nav": {
+    "sobre": "Sobre",
+    "equipe": "Equipe",
+    "jogos": "Jogos",
+    "cta": "Fale com a gente",
+    "abrirMenu": "Abrir menu",
+    "fecharMenu": "Fechar menu",
+    "idioma": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "desde 2024",
+    "titulo": "Jogos com <span class=\"flicker-text\">chama</span> própria.",
+    "sub": "Estúdio brasileiro de jogos desde 2024. Criamos títulos autorais e usamos jogos para falar de preservação ambiental e acessibilidade.",
+    "ctaJogos": "Ver nossos jogos",
+    "destaqueHero": "Alguns dos nossos jogos"
+  },
+  "sobre": {
+    "eyebrow": "o que nos move",
+    "titulo": "Diversão com propósito.",
+    "sub": "A Fundev nasceu em 2024 com uma ideia simples: jogos podem divertir e, ao mesmo tempo, contar histórias que importam. É por isso que, ao lado dos nossos títulos autorais, mantemos projetos voltados à preservação ambiental e à acessibilidade.",
+    "card1Titulo": "Jogos autorais",
+    "card1Texto": "Criamos nossos próprios universos, mecânicas e histórias, da ideia no papel até a primeira build jogável.",
+    "card2Titulo": "Impacto social",
+    "card2Texto": "<strong>Pantany</strong>, nosso projeto social, usa jogos para falar sobre a preservação do Pantanal, um dos biomas mais ricos e ameaçados do Brasil.",
+    "card3Titulo": "Acessibilidade",
+    "card3Texto": "<strong>A Aventura do Folclore</strong> está sendo criada para crianças autistas de Mato Grosso, pensada desde o início para incluir.",
+    "card4Titulo": "Software sob medida",
+    "card4Texto": "Estamos dando os primeiros passos além dos jogos, desenvolvendo software sob encomenda: soluções digitais pensadas do zero para cada projeto."
+  },
+  "equipe": {
+    "eyebrow": "quem segura essa chama",
+    "titulo": "A equipe",
+    "sub": "Um time focado e obcecado por fazer jogos bons.",
+    "erro": "Não foi possível carregar a equipe agora."
+  },
+  "jogos": {
+    "eyebrow": "portfólio",
+    "titulo": "Nossos jogos",
+    "sub": "Alguns dos projetos que já colocamos no mundo, e outros que ainda estão pegando fogo.",
+    "erro": "Não foi possível carregar os jogos agora. Recarregue a página para tentar de novo.",
+    "vazio": "Nenhum jogo nesta categoria.",
+    "filtroTodos": "Todos",
+    "destaques": "Em destaque",
+    "destaqueAnterior": "Destaque anterior",
+    "destaqueProximo": "Próximo destaque",
+    "emBreve": "Em breve",
+    "jogar": "Jogar",
+    "filtrosBotao": "Filtrar e buscar",
+    "buscaRotulo": "Buscar jogo pelo título",
+    "buscaPlaceholder": "Buscar por título ou gênero…",
+    "grupoTipo": "Tipo",
+    "grupoGenero": "Gênero"
+  },
+  "tipos": {
+    "independente": "Independentes",
+    "parceria": "Parcerias"
+  },
+  "status": {
+    "disponivel": "disponível",
+    "desenvolvimento": "em desenvolvimento"
+  },
+  "modal": {
+    "fechar": "Fechar",
+    "avisoEmbed": "O jogo roda aqui dentro, servido pelo itch.io."
+  },
+  "contato": {
+    "eyebrow": "bora conversar?",
+    "titulo": "Fale com a gente",
+    "sub": "Tem um projeto, uma ideia ou só quer trocar uma ideia sobre jogos? Manda um alô. A gente responde.",
+    "labelEmail": "E-mail",
+    "labelInstagram": "Instagram",
+    "labelItch": "itch.io",
+    "waTitulo": "Chama no WhatsApp",
+    "waTexto": "É a forma mais rápida de falar com a gente: projetos, parcerias ou só pra trocar uma ideia sobre jogos.",
+    "waBotao": "Chamar no WhatsApp"
+  },
+  "rodape": {
+    "copy": "Fundev. Estúdio indie desde 2024"
+  },
+  "redes": {
+    "itch": "itch.io",
+    "steam": "Steam",
+    "epic": "Epic Games",
+    "googleplay": "Google Play",
+    "apple": "App Store",
+    "gamejolt": "Game Jolt",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "site": "Site pessoal",
+    "email": "E-mail"
+  }
+}

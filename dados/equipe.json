@@ -1,0 +1,95 @@
+{
+  "idiomaPadrao": "pt-BR",
+  "membros": [
+    {
+      "id": "lucas",
+      "nome": "Lucas",
+      "funcao": {
+        "pt-BR": "Diretor da Equipe",
+        "en": "Team Director"
+      },
+      "bio": {
+        "pt-BR": "Cuida da visão geral dos projetos e mantém o time remando na mesma direção, do conceito ao lançamento.",
+        "en": "Owns the overall vision and keeps the team rowing in the same direction, from concept to launch."
+      },
+      "foto": {
+        "arquivo": "assets/team/lucas.webp",
+        "largura": 320,
+        "altura": 320
+      },
+      "links": {
+        "itch": "",
+        "steam": "",
+        "epic": "",
+        "googleplay": "",
+        "apple": "",
+        "gamejolt": "",
+        "discord": "",
+        "instagram": "123",
+        "linkedin": "123",
+        "github": "",
+        "site": ""
+      }
+    },
+    {
+      "id": "vitor",
+      "nome": "Vitor Oggiba",
+      "funcao": {
+        "pt-BR": "Diretor de Programação e Banco de Dados",
+        "en": "Director of Programming and Databases"
+      },
+      "bio": {
+        "pt-BR": "Responsável pela arquitetura técnica dos jogos e pelos sistemas que guardam os dados por trás de cada projeto.",
+        "en": "Responsible for the games' technical architecture and the systems holding the data behind each project."
+      },
+      "foto": {
+        "arquivo": "assets/team/vitor.webp",
+        "largura": 320,
+        "altura": 338
+      },
+      "links": {
+        "itch": "",
+        "steam": "",
+        "epic": "",
+        "googleplay": "",
+        "apple": "",
+        "gamejolt": "",
+        "discord": "",
+        "instagram": "",
+        "linkedin": "",
+        "github": "",
+        "site": ""
+      }
+    },
+    {
+      "id": "danrley",
+      "nome": "Danrley",
+      "funcao": {
+        "pt-BR": "Diretor de Design",
+        "en": "Design Director"
+      },
+      "bio": {
+        "pt-BR": "Comanda a identidade visual e a experiência de cada jogo, da arte à sensação de cada interação.",
+        "en": "Leads the visual identity and the feel of every game, from art to the texture of each interaction."
+      },
+      "foto": {
+        "arquivo": "assets/team/danrley.webp",
+        "largura": 320,
+        "altura": 320
+      },
+      "links": {
+        "itch": "",
+        "steam": "",
+        "epic": "",
+        "googleplay": "",
+        "apple": "",
+        "gamejolt": "",
+        "discord": "",
+        "instagram": "",
+        "linkedin": "",
+        "github": "",
+        "site": ""
+      }
+    }
+  ]
+}

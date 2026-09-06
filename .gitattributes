@@ -1,0 +1,10 @@
+# Normaliza quebras de linha: o repo guarda LF e o checkout mantém LF em
+# qualquer sistema. Sem isto, o autocrlf do Windows reescreve o arquivo
+# inteiro e o diff fica ilegível.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary

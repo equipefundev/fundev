@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://equipefundev.github.io/fundev/sitemap.xml
