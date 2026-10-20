@@ -6,13 +6,15 @@
       "pantany",
       "tormenta-da-rosa",
       "z-chaos",
-      "lindux"
+      "lindux",
+      "kindling"
     ],
     "destaques": [
       "pantany",
       "z-chaos",
       "lindux",
-      "aventura-do-folclore"
+      "aventura-do-folclore",
+      "kindling"
     ]
   },
   "vocabularioTags": {
@@ -307,6 +309,46 @@
       },
       "plataformas": [],
       "links": [],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "kindling",
+      "titulo": {
+        "pt-BR": "Kindling"
+      },
+      "tipo": "independente",
+      "status": "desenvolvimento",
+      "tags": [],
+      "ano": 2026,
+      "resumo": {
+        "pt-BR": "Software para video chamada"
+      },
+      "descricao": {
+        "pt-BR": "Kindling é um softaware para video chamadas com foco em simplicaidade e mais dinamisno nas reuniões onlines. Focado para aulas online e video conferência."
+      },
+      "capa": {
+        "arquivo": "assets/games/kindling.webp",
+        "largura": 1200,
+        "altura": 1200,
+        "cor": "#120E0A",
+        "bytes": 13480
+      },
+      "plataformas": [
+        {
+          "pt-BR": "Web Html"
+        }
+      ],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Teste grátis"
+          },
+          "url": "https://kindling-screen.netlify.app/"
+        }
+      ],
       "embed": {},
       "galeria": [],
       "video": "",
