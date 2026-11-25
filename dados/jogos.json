@@ -4,10 +4,11 @@
     "limiteParaFiltros": 10,
     "cabecalho": [
       "pantany",
+      "kindling",
       "tormenta-da-rosa",
       "z-chaos",
       "lindux",
-      "kindling"
+      "aventura-do-folclore"
     ],
     "destaques": [
       "pantany",
@@ -93,7 +94,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Jogar no Game Jolt",
+            "pt-BR": "Jogar",
             "en": "Play on Game Jolt"
           },
           "url": "https://gamejolt.com/games/pantany/649272"
@@ -149,7 +150,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Jogar no itch.io",
+            "pt-BR": "Jogar",
             "en": "Play on itch.io"
           },
           "url": "https://equipefundev.itch.io/z-chaos"
@@ -208,7 +209,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Jogar no itch.io",
+            "pt-BR": "Jogar",
             "en": "Play on itch.io"
           },
           "url": "https://equipefundev.itch.io/lindux"
@@ -260,7 +261,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Baixar na Google Play",
+            "pt-BR": "Download",
             "en": "Get it on Google Play"
           },
           "url": "https://play.google.com/store/apps/details?id=com.elementares.arosadesangue"
@@ -344,9 +345,9 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Teste grátis"
+            "pt-BR": "Saiba mais"
           },
-          "url": "https://kindling-screen.netlify.app/"
+          "url": "https://kindling.fundev.com.br"
         }
       ],
       "embed": {},
