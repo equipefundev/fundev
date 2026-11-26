@@ -157,7 +157,8 @@ function capasNoHero(jogos) {
 }
 
 export function renderizarBiblioteca(lista, cfg = {}) {
-  jogos = lista;
+  // Kindling é apresentado como app no portfólio; não duplicar no catálogo de jogos.
+  jogos = lista.filter(j => j.id !== 'kindling');
   config = cfg;
   const alvo = document.getElementById('biblioteca');
   if (!alvo) return;

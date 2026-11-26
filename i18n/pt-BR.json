@@ -3,23 +3,25 @@
   "htmlLang": "pt-BR",
   "ogLocale": "pt_BR",
   "meta": {
-    "titulo": "Fundev | Estúdio de jogos",
-    "descricao": "Estúdio de jogos criado em 2024. Jogos autorais, projetos de impacto social e desenvolvimento de software sob medida."
+    "titulo": "Fundev | Jogos e apps que engajam",
+    "descricao": "Advergames, serious games e apps sob medida para empresas, escolas e instituições. Conheça também os jogos autorais da Fundev."
   },
   "nav": {
+    "solucoes": "Soluções",
+    "portfolio": "Portfólio",
+    "kindling": "Kindling",
     "sobre": "Sobre",
-    "equipe": "Equipe",
-    "jogos": "Jogos",
-    "cta": "Fale com a gente",
+    "contato": "Contato",
     "abrirMenu": "Abrir menu",
     "fecharMenu": "Fechar menu",
     "idioma": "Idioma"
   },
   "hero": {
-    "eyebrow": "desde 2024",
-    "titulo": "Jogos com <span class=\"flicker-text\">chama</span> própria.",
-    "sub": "Estúdio brasileiro de jogos desde 2024. Criamos títulos autorais e usamos jogos para falar de preservação ambiental e acessibilidade.",
-    "ctaJogos": "Ver nossos jogos",
+    "eyebrow": "jogos, apps e experiências digitais",
+    "titulo": "Jogos e apps que engajam.",
+    "sub": "Advergames, serious games e software sob medida para empresas, escolas e instituições. Também criamos jogos autorais.",
+    "ctaSolucoes": "Ver soluções",
+    "ctaOrcamento": "Solicitar orçamento",
     "destaqueHero": "Alguns dos nossos jogos"
   },
   "sobre": {
@@ -35,6 +37,25 @@
     "card4Titulo": "Software sob medida",
     "card4Texto": "Estamos dando os primeiros passos além dos jogos, desenvolvendo software sob encomenda: soluções digitais pensadas do zero para cada projeto."
   },
+  "solucoes": {
+    "eyebrow": "o que podemos criar", "titulo": "Soluções para envolver e ensinar", "sub": "Projetos digitais pensados para o seu público e objetivo.",
+    "advergameTitulo": "Advergames", "advergameTexto": "Jogos de marca que apresentam produtos e campanhas de forma interativa.", "advergamePublico": "empresas e equipes de marketing.",
+    "seriousTitulo": "Serious games", "seriousTexto": "Jogos para apoiar aprendizagem, conscientização e desenvolvimento de habilidades.", "seriousPublico": "escolas e instituições.",
+    "appsTitulo": "Apps sob demanda", "appsTexto": "Aplicativos e ferramentas digitais criados para necessidades específicas.", "appsPublico": "empresas, escolas e instituições.", "paraQuem": "Para quem:", "verCaso": "Ver caso relacionado →"
+  },
+  "portfolio": {
+    "eyebrow": "trabalhos selecionados", "titulo": "Portfólio", "sub": "Projetos autorais e soluções criadas para diferentes objetivos.", "jogos": "Jogos", "apps": "Apps e soluções", "maisJogos": "Mais jogos autorais",
+    "problema": "Problema", "fizemos": "O que fizemos", "resultado": "Resultado", "saibaMais": "Saiba mais →",
+    "pantanyProblema": "[PREENCHER: desafio ou necessidade que originou o projeto]", "pantanyFeito": "Jogo educativo sobre a preservação do Pantanal.", "pantanyResultado": "[PREENCHER: resultado, alcance ou aprendizado]",
+    "folcloreTitulo": "A Aventura do Folclore", "folcloreProblema": "[PREENCHER: desafio apresentado pelo cliente]", "folcloreFeito": "Jogo sobre folclore brasileiro, em desenvolvimento para um cliente de Mato Grosso.", "folcloreResultado": "Em desenvolvimento. [PREENCHER: entregas ou resultado quando disponível]",
+    "kindlingProblema": "[PREENCHER: necessidade de comunicação que motivou o projeto]", "kindlingFeito": "Aplicativo de videochamadas voltado a aulas e reuniões online.", "kindlingResultado": "[PREENCHER: resultado ou estágio atual do produto]", "advergamePlaceholder": "[PREENCHER: incluir case de advergame relacionado]"
+  },
+  "processo": {
+    "eyebrow": "do primeiro papo à publicação", "titulo": "Como trabalhamos",
+    "passo1Titulo": "Conversa inicial", "passo1Texto": "Entendemos seu objetivo, público e contexto.", "passo2Titulo": "Proposta", "passo2Texto": "Apresentamos escopo, etapas, prazo e investimento.",
+    "passo3Titulo": "Desenvolvimento por entregas", "passo3Texto": "Construímos o projeto em etapas com alinhamentos ao longo do caminho.", "passo4Titulo": "Publicação e suporte", "passo4Texto": "Preparamos a publicação e combinamos o suporte necessário."
+  },
+  "prova": {"eyebrow":"parcerias e experiências", "titulo":"Quem já trabalhou com a Fundev", "logosTitulo":"Clientes e parceiros", "logos":"[PREENCHER: logos de clientes e parceiros autorizados]", "depoimentosTitulo":"Depoimentos", "depoimentos":"[PREENCHER: depoimentos autorizados, com nome e organização]"},
   "equipe": {
     "eyebrow": "quem segura essa chama",
     "titulo": "A equipe",
@@ -74,16 +95,16 @@
   "contato": {
     "eyebrow": "bora conversar?",
     "titulo": "Fale com a gente",
-    "sub": "Tem um projeto, uma ideia ou só quer trocar uma ideia sobre jogos? Manda um alô. A gente responde.",
+    "sub": "Conte o que você quer criar. A gente conversa e entende o próximo passo.",
     "labelEmail": "E-mail",
     "labelInstagram": "Instagram",
     "labelItch": "itch.io",
     "waTitulo": "Chama no WhatsApp",
-    "waTexto": "É a forma mais rápida de falar com a gente: projetos, parcerias ou só pra trocar uma ideia sobre jogos.",
-    "waBotao": "Chamar no WhatsApp"
+    "waTexto": "Fale diretamente com a equipe sobre seu projeto.", "waBotao": "Chamar no WhatsApp",
+    "formTitulo":"Ou envie os detalhes do projeto", "nome":"Nome", "email":"E-mail", "tipo":"Tipo de projeto", "selecione":"Selecione", "outro":"Outro", "prazo":"Prazo desejado", "prazoPlaceholder":"Ex.: mês/ano", "mensagem":"Mensagem", "enviar":"Enviar por e-mail", "formAviso":"O formulário abrirá seu aplicativo de e-mail."
   },
   "rodape": {
-    "copy": "Fundev. Estúdio indie desde 2024"
+    "copy": "Fundev. Jogos e soluções digitais"
   },
   "redes": {
     "itch": "itch.io",

@@ -1210,3 +1210,79 @@ body.sem-rolagem{ overflow: hidden; }
 @media (max-width: 480px){
   section{ padding: 70px 18px; }
 }
+
+/* Novas áreas comerciais: seguem a paleta, tipografia e espaçamentos do site. */
+.hero-text{ max-width: 660px; }
+.hero-title{ max-width: 13ch; }
+.solucoes, .processo, .prova-social{ max-width: none; }
+.solucoes-grid, .cases-grid, .processo-grid, .prova-grid{
+  max-width: var(--container); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+}
+.solucao-card, .case-card, .processo-grid li, .prova-grid > div{
+  background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius-md);
+}
+.solucao-card{ padding: 28px; }
+.solucao-icone{ display: block; font-size: 1.8rem; margin-bottom: 18px; }
+.solucao-card h3, .processo-grid h3{ font-size: 1.25rem; }
+.solucao-card > p{ margin-bottom: 12px; }
+.solucao-para{ font-size: .9rem; }
+.solucao-para strong{ color: var(--ink); }
+.text-link{ display: inline-block; margin-top: 8px; color: var(--ember-light); font-weight: 700; }
+.text-link:hover{ color: var(--ember); }
+.portfolio{ background: var(--bg-panel); border-block: 1px solid var(--line); }
+.portfolio-bloco{ max-width: var(--container); margin: 0 auto 64px; }
+.portfolio-bloco:last-child{ margin-bottom: 0; }
+.portfolio-titulo{ font-size: 1.7rem; margin: 0 0 22px; }
+.cases-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cases-grid--apps{ grid-template-columns: minmax(0, 1fr); }
+.case-card{ overflow: hidden; display: grid; grid-template-columns: minmax(150px, .65fr) 1fr; }
+.case-card > img{ width: 100%; height: 100%; min-height: 100%; object-fit: cover; background: var(--bg-void); }
+.case-content{ padding: 22px; }
+.case-content h4{ font: 700 1.25rem/1.2 var(--font-display); margin: 0 0 18px; }
+.case-content p{ font-size: .88rem; margin: 0 0 14px; }
+.case-content p strong, .case-content p span{ display: block; }
+.case-content p strong{ color: var(--ember-light); font-family: var(--font-mono); font-size: .74rem; margin-bottom: 3px; }
+.catalogo-heading{ margin: 44px 0 18px; font: 700 1.2rem var(--font-display); }
+.portfolio .destaques{ padding: 0; }
+.portfolio .games-grid{ margin-top: 28px; }
+.processo-grid{ list-style: none; padding: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.processo-grid li{ padding: 24px; }
+.processo-grid li > span{ display: inline-block; color: var(--ember); font: .85rem var(--font-mono); margin-bottom: 24px; }
+.processo-grid p{ font-size: .92rem; margin: 0; }
+.prova-social{ background: var(--bg-panel); border-block: 1px solid var(--line); }
+.prova-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.prova-grid > div{ padding: 26px; }
+.prova-grid h3{ font-size: 1.15rem; }
+.placeholder{ border: 1px dashed var(--line); border-radius: var(--radius-sm); padding: 16px; color: var(--ink-muted); margin: 0; font-size: .9rem; }
+.case-placeholder{ max-width: var(--container); margin: 22px auto 0; }
+.contato-inner{ grid-template-columns: .8fr 1.2fr; }
+.contato-opcoes{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.whatsapp-card{ padding: 26px; }
+.form-contato{ padding: 24px; background: var(--bg-void); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.form-contato h3{ font-size: 1.3rem; margin-bottom: 18px; }
+.form-contato label{ display: block; margin-bottom: 14px; color: var(--ink-muted); font-size: .88rem; font-weight: 700; }
+.form-contato input, .form-contato select, .form-contato textarea{
+  display: block; width: 100%; margin-top: 6px; padding: 11px 12px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--bg-panel); color: var(--ink); font: inherit;
+}
+.form-contato textarea{ resize: vertical; }
+.form-contato input:focus, .form-contato select:focus, .form-contato textarea:focus{ outline: 2px solid var(--ember); outline-offset: 1px; }
+.form-aviso{ margin: 12px 0 0; font-size: .78rem; }
+
+@media (max-width: 1000px){
+  .solucoes-grid{ grid-template-columns: 1fr; }
+  .processo-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contato-opcoes{ grid-template-columns: 1fr; }
+}
+@media (max-width: 720px){
+  .hero-title{ max-width: none; }
+  .cases-grid, .prova-grid{ grid-template-columns: 1fr; }
+  .case-card{ grid-template-columns: 1fr; }
+  .case-card > img{ height: 210px; min-height: 0; object-fit: contain; }
+  .processo-grid{ grid-template-columns: 1fr; }
+  .processo-grid li > span{ margin-bottom: 12px; }
+  .contato-inner{ grid-template-columns: 1fr; }
+  .contato-opcoes{ grid-template-columns: 1fr; }
+}

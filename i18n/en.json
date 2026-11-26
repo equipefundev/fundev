@@ -3,23 +3,25 @@
   "htmlLang": "en",
   "ogLocale": "en_US",
   "meta": {
-    "titulo": "Fundev | Game studio",
-    "descricao": "Game studio founded in 2024. Original games, social impact projects and custom software development."
+    "titulo": "Fundev | Games and apps that engage",
+    "descricao": "Advergames, serious games and custom apps for businesses, schools and institutions. Explore Fundev's original games too."
   },
   "nav": {
+    "solucoes": "Solutions",
+    "portfolio": "Portfolio",
+    "kindling": "Kindling",
     "sobre": "About",
-    "equipe": "Team",
-    "jogos": "Games",
-    "cta": "Get in touch",
+    "contato": "Contact",
     "abrirMenu": "Open menu",
     "fecharMenu": "Close menu",
     "idioma": "Language"
   },
   "hero": {
-    "eyebrow": "since 2024",
-    "titulo": "Games with a <span class=\"flicker-text\">flame</span> of their own.",
-    "sub": "Brazilian game studio since 2024. We make original titles and use games to talk about environmental preservation and accessibility.",
-    "ctaJogos": "See our games",
+    "eyebrow": "games, apps and digital experiences",
+    "titulo": "Games and apps that engage.",
+    "sub": "Advergames, serious games and custom software for businesses, schools and institutions. We also make original games.",
+    "ctaSolucoes": "Explore solutions",
+    "ctaOrcamento": "Request a quote",
     "destaqueHero": "Some of our games"
   },
   "sobre": {
@@ -35,6 +37,25 @@
     "card4Titulo": "Custom software",
     "card4Texto": "We are taking our first steps beyond games, building software to order: digital solutions designed from scratch for each project."
   },
+  "solucoes": {
+    "eyebrow":"what we can create", "titulo":"Solutions that engage and teach", "sub":"Digital projects designed for your audience and goals.",
+    "advergameTitulo":"Advergames", "advergameTexto":"Branded games that present products and campaigns interactively.", "advergamePublico":"businesses and marketing teams.",
+    "seriousTitulo":"Serious games", "seriousTexto":"Games that support learning, awareness and skill development.", "seriousPublico":"schools and institutions.",
+    "appsTitulo":"Custom apps", "appsTexto":"Apps and digital tools built for specific needs.", "appsPublico":"businesses, schools and institutions.", "paraQuem":"For:", "verCaso":"See related case →"
+  },
+  "portfolio": {
+    "eyebrow":"selected work", "titulo":"Portfolio", "sub":"Original projects and solutions created for different goals.", "jogos":"Games", "apps":"Apps and solutions", "maisJogos":"More original games",
+    "problema":"Problem", "fizemos":"What we did", "resultado":"Result", "saibaMais":"Learn more →",
+    "pantanyProblema":"[FILL IN: challenge or need behind the project]", "pantanyFeito":"Educational game about preserving the Pantanal.", "pantanyResultado":"[FILL IN: outcome, reach or learning]",
+    "folcloreTitulo":"A Aventura do Folclore", "folcloreProblema":"[FILL IN: challenge presented by the client]", "folcloreFeito":"Game about Brazilian folklore, in development for a client in Mato Grosso.", "folcloreResultado":"In development. [FILL IN: deliverables or outcome when available]",
+    "kindlingProblema":"[FILL IN: communication need behind the project]", "kindlingFeito":"Video calling app for online classes and meetings.", "kindlingResultado":"[FILL IN: product outcome or current stage]", "advergamePlaceholder":"[FILL IN: add a related advergame case]"
+  },
+  "processo": {
+    "eyebrow":"from first conversation to release", "titulo":"How we work",
+    "passo1Titulo":"Initial conversation", "passo1Texto":"We learn about your goals, audience and context.", "passo2Titulo":"Proposal", "passo2Texto":"We outline scope, stages, timeline and investment.",
+    "passo3Titulo":"Development in stages", "passo3Texto":"We build the project in stages and align along the way.", "passo4Titulo":"Release and support", "passo4Texto":"We prepare the release and agree on the support needed."
+  },
+  "prova": {"eyebrow":"partnerships and experience", "titulo":"Who has worked with Fundev", "logosTitulo":"Clients and partners", "logos":"[FILL IN: approved client and partner logos]", "depoimentosTitulo":"Testimonials", "depoimentos":"[FILL IN: approved testimonials with name and organization]"},
   "equipe": {
     "eyebrow": "who keeps the flame",
     "titulo": "The team",
@@ -74,16 +95,16 @@
   "contato": {
     "eyebrow": "let's talk?",
     "titulo": "Get in touch",
-    "sub": "Got a project, an idea, or just want to talk about games? Say hi. We answer.",
+    "sub": "Tell us what you want to create. We can talk through the next step.",
     "labelEmail": "Email",
     "labelInstagram": "Instagram",
     "labelItch": "itch.io",
     "waTitulo": "Reach us on WhatsApp",
-    "waTexto": "It is the fastest way to reach us: projects, partnerships, or just to talk about games.",
-    "waBotao": "Message on WhatsApp"
+    "waTexto": "Talk directly with the team about your project.", "waBotao": "Message us on WhatsApp",
+    "formTitulo":"Or send us your project details", "nome":"Name", "email":"Email", "tipo":"Project type", "selecione":"Select", "outro":"Other", "prazo":"Desired timeline", "prazoPlaceholder":"Example: month/year", "mensagem":"Message", "enviar":"Send by email", "formAviso":"The form will open your email application."
   },
   "rodape": {
-    "copy": "Fundev. Indie studio since 2024"
+    "copy": "Fundev. Games and digital solutions"
   },
   "redes": {
     "itch": "itch.io",
