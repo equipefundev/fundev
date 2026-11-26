@@ -6,6 +6,7 @@
       "pantany",
       "kindling",
       "tormenta-da-rosa",
+      "k",
       "z-chaos",
       "lindux",
       "aventura-do-folclore"
@@ -14,8 +15,10 @@
       "pantany",
       "kindling",
       "z-chaos",
+      "k",
       "lindux",
-      "aventura-do-folclore"
+      "aventura-do-folclore",
+      "tormenta-da-rosa"
     ]
   },
   "vocabularioTags": {
@@ -150,7 +153,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Jogar",
+            "pt-BR": "Jogar no itch.io",
             "en": "Play on itch.io"
           },
           "url": "https://equipefundev.itch.io/z-chaos"
@@ -209,7 +212,7 @@
       "links": [
         {
           "rotulo": {
-            "pt-BR": "Jogar",
+            "pt-BR": "Jogar itch.io",
             "en": "Play on itch.io"
           },
           "url": "https://equipefundev.itch.io/lindux"
@@ -239,11 +242,11 @@
       ],
       "ano": 2025,
       "resumo": {
-        "pt-BR": "Projeto autoral com visual inteiramente desenhado à mão.",
+        "pt-BR": "Tormenta da Rosa é um metroidvania 2D onde Ravenna explora masmorras e enfrenta Guardiões para desvendar seu passado.",
         "en": "An original project with fully hand-drawn art."
       },
       "descricao": {
-        "pt-BR": "Projeto autoral da Fundev com clima sombrio e visual inteiramente desenhado à mão. Disponível para Android na Google Play.",
+        "pt-BR": "Ravenna desperta em uma masmorra dominada por Guardiões, cercada por um mistério sombrio. Para sobreviver e desvendar o que a trouxe até ali, ela precisará explorar calabouços interconectados, enfrentar inimigos habilidosos e encarar as marcas do próprio passado.\n​Tormenta da Rosa combina arte 2D desenhada à mão, exploração metroidvania e combates dinâmicos contra adversários implacáveis.",
         "en": "An original Fundev project with a dark mood and fully hand-drawn art. Available for Android on Google Play."
       },
       "capa": {
@@ -348,6 +351,42 @@
             "pt-BR": "Saiba mais"
           },
           "url": "https://equipefundev.github.io/kindling-site"
+        }
+      ],
+      "embed": {},
+      "galeria": [],
+      "video": "",
+      "creditos": []
+    },
+    {
+      "id": "k",
+      "titulo": {
+        "pt-BR": "Kartou!"
+      },
+      "tipo": "independente",
+      "status": "disponivel",
+      "tags": [],
+      "ano": 2026,
+      "resumo": {
+        "pt-BR": "Aplicativo para sorteio de kart em kartôdromos."
+      },
+      "descricao": {
+        "pt-BR": "O Kartou! veio para facilitar o sorteio de karts para campeonatos e eventos de kartismo, eliminando sorteios \nmanuais e garantindo transparência e rapidez na organização das baterias."
+      },
+      "capa": {
+        "arquivo": "assets/games/k.webp",
+        "largura": 1200,
+        "altura": 675,
+        "cor": "#6A3001",
+        "bytes": 13728
+      },
+      "plataformas": [],
+      "links": [
+        {
+          "rotulo": {
+            "pt-BR": "Acessar"
+          },
+          "url": "https://equipefundev.github.io/Kartou-/index.html"
         }
       ],
       "embed": {},
