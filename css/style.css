@@ -493,7 +493,17 @@ section{ position: relative; padding: 100px 24px; scroll-margin-top: 72px; }
 
 /* A chama continua sendo a assinatura, mas parou de ocupar o espaco mais caro
    da pagina: quem ocupa agora sao os jogos. */
-.hero-mark{ width: 46px; height: auto; margin: 0 0 18px; display: block; }
+.hero-mark{
+  width: 48px; height: auto; margin: 0 0 18px; display: block;
+  transform-origin: 50% 90%;
+  filter: drop-shadow(0 3px 8px rgb(var(--rgb-acento) / 28%));
+  animation: marca-chama 2.6s ease-in-out infinite;
+}
+@keyframes marca-chama{
+  0%,100%{ transform: translateY(0) scale(1); filter: drop-shadow(0 3px 8px rgb(var(--rgb-acento) / 25%)); }
+  32%{ transform: translateY(-1px) scale(1.035,.99); filter: drop-shadow(0 4px 12px rgb(var(--rgb-acento) / 42%)); }
+  66%{ transform: translateY(0) scale(.99,1.025); filter: drop-shadow(0 2px 7px rgb(var(--rgb-acento) / 30%)); }
+}
 
 .hero-jogos{
   display: grid;
@@ -523,20 +533,6 @@ section{ position: relative; padding: 100px 24px; scroll-margin-top: 72px; }
   z-index: 1;
   width: 100%; height: 100%;
   object-fit: contain;
-}
-.flame-body{
-  transform-origin: 50% 100%;
-  animation: flame-sway 2.6s ease-in-out infinite;
-}
-@keyframes flame-sway{
-  0%,100%{ transform: scaleY(1) skewX(0deg); }
-  30%{ transform: scaleY(1.03) skewX(-1.2deg); }
-  60%{ transform: scaleY(.98) skewX(1.4deg); }
-}
-.flame-eye{ animation: blink 5s ease-in-out infinite; transform-origin: center; }
-@keyframes blink{
-  0%,92%,100%{ transform: scaleY(1); }
-  95%{ transform: scaleY(.15); }
 }
 
 .scroll-cue{
