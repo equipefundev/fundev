@@ -35,20 +35,21 @@
     "card3Titulo": "Acessibilidade",
     "card3Texto": "<strong>A Aventura do Folclore</strong> está sendo criada para crianças autistas de Mato Grosso, pensada desde o início para incluir.",
     "card4Titulo": "Software sob medida",
-    "card4Texto": "Estamos dando os primeiros passos além dos jogos, desenvolvendo software sob encomenda: soluções digitais pensadas do zero para cada projeto."
+    "card4Texto": "Estamos dando os primeiros passos além dos jogos, desenvolvendo software sob encomenda: soluções digitais pensadas do zero para cada projeto.",
+    "softwareImagemAlt": "Identidade visual do aplicativo Kartou!."
   },
   "solucoes": {
     "eyebrow": "o que podemos criar", "titulo": "Soluções para envolver e ensinar", "sub": "Projetos digitais pensados para o seu público e objetivo.",
-    "advergameTitulo": "Advergames", "advergameTexto": "Jogos de marca que apresentam produtos e campanhas de forma interativa.", "advergamePublico": "empresas e equipes de marketing.",
-    "seriousTitulo": "Serious games", "seriousTexto": "Jogos para apoiar aprendizagem, conscientização e desenvolvimento de habilidades.", "seriousPublico": "escolas e instituições.",
-    "appsTitulo": "Apps sob demanda", "appsTexto": "Aplicativos e ferramentas digitais criados para necessidades específicas.", "appsPublico": "empresas, escolas e instituições.", "paraQuem": "Para quem:", "verCaso": "Ver caso relacionado →"
+    "advergameTitulo": "Advergames", "advergameTexto": "Jogos de marca que apresentam produtos e campanhas de forma interativa.", "advergamePublico": "empresas e equipes de marketing.", "altAdvergame": "Profissional se diverte com um jogo no celular durante uma pausa no trabalho.",
+    "seriousTitulo": "Serious games", "seriousTexto": "Jogos para apoiar aprendizagem, conscientização e desenvolvimento de habilidades.", "seriousPublico": "escolas e instituições.", "altSerious": "Estudantes participam de uma aula em sala.",
+    "appsTitulo": "Apps sob demanda", "appsTexto": "Aplicativos e ferramentas digitais criados para necessidades específicas.", "appsPublico": "empresas, escolas e instituições.", "altApps": "Pessoa trabalha em um notebook durante o desenvolvimento de software.", "paraQuem": "Para quem:", "verCaso": "Ver caso relacionado →"
   },
   "portfolio": {
     "eyebrow": "trabalhos selecionados", "titulo": "Portfólio", "sub": "Projetos autorais e soluções criadas para diferentes objetivos.", "jogos": "Jogos", "apps": "Apps e soluções", "maisJogos": "Mais jogos autorais",
     "problema": "Problema", "fizemos": "O que fizemos", "resultado": "Resultado", "saibaMais": "Saiba mais →",
-    "pantanyProblema": "[PREENCHER: desafio ou necessidade que originou o projeto]", "pantanyFeito": "Jogo educativo sobre a preservação do Pantanal.", "pantanyResultado": "[PREENCHER: resultado, alcance ou aprendizado]",
-    "folcloreTitulo": "A Aventura do Folclore", "folcloreProblema": "[PREENCHER: desafio apresentado pelo cliente]", "folcloreFeito": "Jogo sobre folclore brasileiro, em desenvolvimento para um cliente de Mato Grosso.", "folcloreResultado": "Em desenvolvimento. [PREENCHER: entregas ou resultado quando disponível]",
-    "kindlingProblema": "[PREENCHER: necessidade de comunicação que motivou o projeto]", "kindlingFeito": "Aplicativo de videochamadas voltado a aulas e reuniões online.", "kindlingResultado": "[PREENCHER: resultado ou estágio atual do produto]", "advergamePlaceholder": "[PREENCHER: incluir case de advergame relacionado]"
+    "pantanyProblema": "As queimadas no Pantanal afetam a fauna.", "pantanyFeito": "Jogo educativo sobre a preservação do Pantanal.", "pantanyResultado": "O jogo foi apresentado no Pantanal Shopping para conscientizar crianças e adolescentes sobre o desmatamento.",
+    "folcloreTitulo": "A Aventura do Folclore", "folcloreProblema": "Há poucos jogos voltados ao desenvolvimento de crianças autistas.", "folcloreFeito": "Estamos desenvolvendo, para um cliente de Mato Grosso, um jogo sobre o folclore brasileiro que apoia o desenvolvimento das habilidades motoras e da memória, estimula a criatividade e ajuda crianças autistas a compreender as emoções.", "folcloreResultado": "O jogo está em fase de testes em clínicas especializadas.",
+    "kindlingProblema": "Necessidade de um aplicativo de videoconferência simples e fácil de usar, com transmissão de vídeo, organização simplificada das telas e opções de personalização.", "kindlingFeito": "Aplicativo de videochamadas voltado a aulas e reuniões online.", "kindlingResultado": "O aplicativo já está em fase de testes com empresas e escolas.", "kindlingImagemAlt": "Estudante usa o Kindling durante uma atividade remota.", "advergamePlaceholder": "[PREENCHER: incluir case de advergame relacionado]"
   },
   "processo": {
     "eyebrow": "do primeiro papo à publicação", "titulo": "Como trabalhamos",
@@ -101,7 +102,7 @@
     "labelItch": "itch.io",
     "waTitulo": "Chama no WhatsApp",
     "waTexto": "Fale diretamente com a equipe sobre seu projeto.", "waBotao": "Chamar no WhatsApp",
-    "formTitulo":"Ou envie os detalhes do projeto", "nome":"Nome", "email":"E-mail", "tipo":"Tipo de projeto", "selecione":"Selecione", "outro":"Outro", "prazo":"Prazo desejado", "prazoPlaceholder":"Ex.: mês/ano", "mensagem":"Mensagem", "enviar":"Enviar por e-mail", "formAviso":"O formulário abrirá seu aplicativo de e-mail."
+    "formTitulo":"Ou envie os detalhes do projeto", "nome":"Nome", "email":"E-mail", "tipo":"Tipo de projeto", "selecione":"Selecione", "outro":"Outro", "prazo":"Prazo desejado", "prazoPlaceholder":"Ex.: mês/ano", "mensagem":"Mensagem", "enviar":"Enviar por e-mail", "formAviso":"O formulário abrirá uma nova mensagem no Gmail. Se necessário, entre na sua conta para continuar."
   },
   "rodape": {
     "copy": "Fundev. Jogos e soluções digitais"

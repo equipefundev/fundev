@@ -35,20 +35,21 @@
     "card3Titulo": "Accessibility",
     "card3Texto": "<strong>A Aventura do Folclore</strong> is being built for autistic children in Mato Grosso, designed from the start to include.",
     "card4Titulo": "Custom software",
-    "card4Texto": "We are taking our first steps beyond games, building software to order: digital solutions designed from scratch for each project."
+    "card4Texto": "We are taking our first steps beyond games, building software to order: digital solutions designed from scratch for each project.",
+    "softwareImagemAlt": "Kartou! app brand graphic."
   },
   "solucoes": {
     "eyebrow":"what we can create", "titulo":"Solutions that engage and teach", "sub":"Digital projects designed for your audience and goals.",
-    "advergameTitulo":"Advergames", "advergameTexto":"Branded games that present products and campaigns interactively.", "advergamePublico":"businesses and marketing teams.",
-    "seriousTitulo":"Serious games", "seriousTexto":"Games that support learning, awareness and skill development.", "seriousPublico":"schools and institutions.",
-    "appsTitulo":"Custom apps", "appsTexto":"Apps and digital tools built for specific needs.", "appsPublico":"businesses, schools and institutions.", "paraQuem":"For:", "verCaso":"See related case →"
+    "advergameTitulo":"Advergames", "advergameTexto":"Branded games that present products and campaigns interactively.", "advergamePublico":"businesses and marketing teams.", "altAdvergame":"Professional enjoying a mobile game during a break at work.",
+    "seriousTitulo":"Serious games", "seriousTexto":"Games that support learning, awareness and skill development.", "seriousPublico":"schools and institutions.", "altSerious":"Students taking part in a classroom lesson.",
+    "appsTitulo":"Custom apps", "appsTexto":"Apps and digital tools built for specific needs.", "appsPublico":"businesses, schools and institutions.", "altApps":"Person working on a laptop while developing software.", "paraQuem":"For:", "verCaso":"See related case →"
   },
   "portfolio": {
     "eyebrow":"selected work", "titulo":"Portfolio", "sub":"Original projects and solutions created for different goals.", "jogos":"Games", "apps":"Apps and solutions", "maisJogos":"More original games",
     "problema":"Problem", "fizemos":"What we did", "resultado":"Result", "saibaMais":"Learn more →",
-    "pantanyProblema":"[FILL IN: challenge or need behind the project]", "pantanyFeito":"Educational game about preserving the Pantanal.", "pantanyResultado":"[FILL IN: outcome, reach or learning]",
-    "folcloreTitulo":"A Aventura do Folclore", "folcloreProblema":"[FILL IN: challenge presented by the client]", "folcloreFeito":"Game about Brazilian folklore, in development for a client in Mato Grosso.", "folcloreResultado":"In development. [FILL IN: deliverables or outcome when available]",
-    "kindlingProblema":"[FILL IN: communication need behind the project]", "kindlingFeito":"Video calling app for online classes and meetings.", "kindlingResultado":"[FILL IN: product outcome or current stage]", "advergamePlaceholder":"[FILL IN: add a related advergame case]"
+    "pantanyProblema":"Wildfires in the Pantanal affect wildlife.", "pantanyFeito":"Educational game about preserving the Pantanal.", "pantanyResultado":"The game was presented at Pantanal Shopping to raise awareness among children and teenagers about deforestation.",
+    "folcloreTitulo":"A Aventura do Folclore", "folcloreProblema":"There are few games focused on the development of autistic children.", "folcloreFeito":"For a client in Mato Grosso, we are developing a Brazilian folklore game that supports motor skills and memory, encourages creativity, and helps autistic children understand emotions.", "folcloreResultado":"The game is being tested at specialized clinics.",
+    "kindlingProblema":"A need for a simple, easy-to-use video conferencing app with video streaming, simplified screen organization and customization options.", "kindlingFeito":"Video calling app for online classes and meetings.", "kindlingResultado":"The app is currently being tested with businesses and schools.", "kindlingImagemAlt":"Student using Kindling during a remote learning activity.", "advergamePlaceholder":"[FILL IN: add a related advergame case]"
   },
   "processo": {
     "eyebrow":"from first conversation to release", "titulo":"How we work",
@@ -101,7 +102,7 @@
     "labelItch": "itch.io",
     "waTitulo": "Reach us on WhatsApp",
     "waTexto": "Talk directly with the team about your project.", "waBotao": "Message us on WhatsApp",
-    "formTitulo":"Or send us your project details", "nome":"Name", "email":"Email", "tipo":"Project type", "selecione":"Select", "outro":"Other", "prazo":"Desired timeline", "prazoPlaceholder":"Example: month/year", "mensagem":"Message", "enviar":"Send by email", "formAviso":"The form will open your email application."
+    "formTitulo":"Or send us your project details", "nome":"Name", "email":"Email", "tipo":"Project type", "selecione":"Select", "outro":"Other", "prazo":"Desired timeline", "prazoPlaceholder":"Example: month/year", "mensagem":"Message", "enviar":"Send by email", "formAviso":"The form will open a new message in Gmail. Sign in to your account if prompted."
   },
   "rodape": {
     "copy": "Fundev. Games and digital solutions"

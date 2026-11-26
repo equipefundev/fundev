@@ -102,7 +102,9 @@
         </svg>
 
         <p class="eyebrow" data-i18n="hero.eyebrow">jogos, apps e experiências digitais</p>
-        <h1 class="hero-title" data-i18n="hero.titulo">Jogos e apps que engajam.</h1>
+        <h1 class="hero-title" data-i18n="hero.titulo">Jogos e apps que 
+          <span class="flicker-text">engajam</span>.
+        </h1>
         <p class="hero-sub" data-i18n="hero.sub">Advergames, serious games e software sob medida para empresas, escolas e instituições. Também criamos jogos autorais.</p>
         <div class="hero-actions">
           <a href="#solucoes" class="btn btn-primary" data-i18n="hero.ctaSolucoes">Ver soluções</a>
@@ -125,9 +127,24 @@
       <p class="section-sub" data-i18n="solucoes.sub">Projetos digitais pensados para o seu público e objetivo.</p>
     </div>
     <div class="solucoes-grid">
-      <article class="solucao-card"><span class="solucao-icone" aria-hidden="true">🎯</span><h3 data-i18n="solucoes.advergameTitulo">Advergames</h3><p data-i18n="solucoes.advergameTexto">Jogos de marca que apresentam produtos e campanhas de forma interativa.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.advergamePublico">empresas e equipes de marketing.</span></p><a href="#case-advergame" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a></article>
-      <article class="solucao-card"><span class="solucao-icone" aria-hidden="true">📚</span><h3 data-i18n="solucoes.seriousTitulo">Serious games</h3><p data-i18n="solucoes.seriousTexto">Jogos para apoiar aprendizagem, conscientização e desenvolvimento de habilidades.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.seriousPublico">escolas e instituições.</span></p><a href="#case-folclore" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a></article>
-      <article class="solucao-card"><span class="solucao-icone" aria-hidden="true">🧩</span><h3 data-i18n="solucoes.appsTitulo">Apps sob demanda</h3><p data-i18n="solucoes.appsTexto">Aplicativos e ferramentas digitais criados para necessidades específicas.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.appsPublico">empresas, escolas e instituições.</span></p><a href="#kindling" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a></article>
+      <article class="solucao-card">
+        <figure class="solucao-foto">
+          <img src="https://images.unsplash.com/photo-1758598306749-0a3c309da698?auto=format&amp;fit=crop&amp;fm=webp&amp;q=78&amp;w=900" alt="Profissional se diverte com um jogo no celular durante uma pausa no trabalho." data-i18n-attr="alt:solucoes.altAdvergame" width="900" height="600" loading="lazy">
+        </figure>
+        <h3 data-i18n="solucoes.advergameTitulo">Advergames</h3><p data-i18n="solucoes.advergameTexto">Jogos de marca que apresentam produtos e campanhas de forma interativa.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.advergamePublico">empresas e equipes de marketing.</span></p><a href="#case-advergame" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a>
+      </article>
+      <article class="solucao-card">
+        <figure class="solucao-foto">
+          <img src="https://images.unsplash.com/photo-1758270704025-0e1a1793e1ca?auto=format&amp;fit=crop&amp;fm=webp&amp;q=78&amp;w=900" alt="Estudantes participam de uma aula em sala." data-i18n-attr="alt:solucoes.altSerious" width="900" height="600" loading="lazy">
+        </figure>
+        <h3 data-i18n="solucoes.seriousTitulo">Serious games</h3><p data-i18n="solucoes.seriousTexto">Jogos para apoiar aprendizagem, conscientização e desenvolvimento de habilidades.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.seriousPublico">escolas e instituições.</span></p><a href="#case-folclore" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a>
+      </article>
+      <article class="solucao-card">
+        <figure class="solucao-foto">
+          <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&amp;fit=crop&amp;fm=webp&amp;q=78&amp;w=900" alt="Pessoa trabalha em um notebook durante o desenvolvimento de software." data-i18n-attr="alt:solucoes.altApps" width="900" height="600" loading="lazy">
+        </figure>
+        <h3 data-i18n="solucoes.appsTitulo">Apps sob demanda</h3><p data-i18n="solucoes.appsTexto">Aplicativos e ferramentas digitais criados para necessidades específicas.</p><p class="solucao-para"><strong data-i18n="solucoes.paraQuem">Para quem:</strong> <span data-i18n="solucoes.appsPublico">empresas, escolas e instituições.</span></p><a href="#kindling" class="text-link" data-i18n="solucoes.verCaso">Ver caso relacionado →</a>
+      </article>
     </div>
   </section>
 
@@ -141,17 +158,16 @@
     <div class="portfolio-bloco" id="jogos">
       <h3 class="portfolio-titulo" data-i18n="portfolio.jogos">Jogos</h3>
       <div class="cases-grid">
-        <article class="case-card" id="case-pantany"><img src="assets/games/pantany.webp" alt="" loading="lazy" width="1000" height="1000"><div class="case-content"><h4>Pantany</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.pantanyProblema">[PREENCHER: desafio ou necessidade que originou o projeto]</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.pantanyFeito">Jogo educativo sobre a preservação do Pantanal.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.pantanyResultado">[PREENCHER: resultado, alcance ou aprendizado]</span></p></div></article>
-        <article class="case-card" id="case-folclore"><img src="assets/games/aventura-do-folclore.webp" alt="" loading="lazy" width="1200" height="675"><div class="case-content"><h4 data-i18n="portfolio.folcloreTitulo">A Aventura do Folclore</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.folcloreProblema">[PREENCHER: desafio apresentado pelo cliente]</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.folcloreFeito">Jogo sobre folclore brasileiro, em desenvolvimento para um cliente de Mato Grosso.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.folcloreResultado">Em desenvolvimento. [PREENCHER: entregas ou resultado quando disponível]</span></p></div></article>
+        <article class="case-card" id="case-pantany"><img src="assets/games/pantany.webp" alt="" loading="lazy" width="1000" height="1000"><div class="case-content"><h4>Pantany</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.pantanyProblema">As queimadas no Pantanal afetam a fauna.</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.pantanyFeito">Jogo educativo sobre a preservação do Pantanal.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.pantanyResultado">O jogo foi apresentado no Pantanal Shopping para conscientizar crianças e adolescentes sobre o desmatamento.</span></p></div></article>
+        <article class="case-card" id="case-folclore"><img src="assets/games/aventura-do-folclore.webp" alt="" loading="lazy" width="1200" height="675"><div class="case-content"><h4 data-i18n="portfolio.folcloreTitulo">A Aventura do Folclore</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.folcloreProblema">Há poucos jogos voltados ao desenvolvimento de crianças autistas.</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.folcloreFeito">Estamos desenvolvendo, para um cliente de Mato Grosso, um jogo sobre o folclore brasileiro que apoia o desenvolvimento das habilidades motoras e da memória, estimula a criatividade e ajuda crianças autistas a compreender as emoções.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.folcloreResultado">O jogo está em fase de testes em clínicas especializadas.</span></p></div></article>
       </div>
-      <p class="placeholder case-placeholder" id="case-advergame" data-i18n="portfolio.advergamePlaceholder">[PREENCHER: incluir case de advergame relacionado]</p>
       <h4 class="catalogo-heading" data-i18n="portfolio.maisJogos">Mais jogos autorais</h4>
       <div class="biblioteca" id="biblioteca"></div>
     </div>
     <div class="portfolio-bloco" id="apps-solucoes">
       <h3 class="portfolio-titulo" data-i18n="portfolio.apps">Apps e soluções</h3>
       <div class="cases-grid cases-grid--apps">
-        <article class="case-card" id="kindling"><img src="assets/games/kindling.webp" alt="" loading="lazy" width="1200" height="1200"><div class="case-content"><h4>Kindling</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.kindlingProblema">[PREENCHER: necessidade de comunicação que motivou o projeto]</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.kindlingFeito">Aplicativo de videochamadas voltado a aulas e reuniões online.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.kindlingResultado">[PREENCHER: resultado ou estágio atual do produto]</span></p><a class="text-link" href="https://equipefundev.github.io/kindling-site" target="_blank" rel="noopener" data-i18n="portfolio.saibaMais">Saiba mais →</a></div></article>
+        <article class="case-card case-card--kindling" id="kindling"><img src="assets/kindling-classroom-logo.webp" alt="Estudante usa o Kindling durante uma atividade remota." data-i18n-attr="alt:portfolio.kindlingImagemAlt" loading="lazy" width="1200" height="675"><div class="case-content"><h4>Kindling</h4><p><strong data-i18n="portfolio.problema">Problema</strong><span data-i18n="portfolio.kindlingProblema">Necessidade de um aplicativo de videoconferência simples e fácil de usar, com transmissão de vídeo, organização simplificada das telas e opções de personalização.</span></p><p><strong data-i18n="portfolio.fizemos">O que fizemos</strong><span data-i18n="portfolio.kindlingFeito">Aplicativo de videochamadas voltado a aulas e reuniões online.</span></p><p><strong data-i18n="portfolio.resultado">Resultado</strong><span data-i18n="portfolio.kindlingResultado">O aplicativo já está em fase de testes com empresas e escolas.</span></p><a class="text-link" href="https://equipefundev.github.io/kindling-site" target="_blank" rel="noopener" data-i18n="portfolio.saibaMais">Saiba mais →</a></div></article>
       </div>
     </div>
   </section>
@@ -160,7 +176,7 @@
   <section class="processo" id="processo"><div class="section-head"><p class="eyebrow" data-i18n="processo.eyebrow">do primeiro papo à publicação</p><h2 data-i18n="processo.titulo">Como trabalhamos</h2></div><ol class="processo-grid"><li><span>01</span><h3 data-i18n="processo.passo1Titulo">Conversa inicial</h3><p data-i18n="processo.passo1Texto">Entendemos seu objetivo, público e contexto.</p></li><li><span>02</span><h3 data-i18n="processo.passo2Titulo">Proposta</h3><p data-i18n="processo.passo2Texto">Apresentamos escopo, etapas, prazo e investimento.</p></li><li><span>03</span><h3 data-i18n="processo.passo3Titulo">Desenvolvimento por entregas</h3><p data-i18n="processo.passo3Texto">Construímos o projeto em etapas com alinhamentos ao longo do caminho.</p></li><li><span>04</span><h3 data-i18n="processo.passo4Titulo">Publicação e suporte</h3><p data-i18n="processo.passo4Texto">Preparamos a publicação e combinamos o suporte necessário.</p></li></ol></section>
 
   <!-- ============ PROVA SOCIAL ============ -->
-  <section class="prova-social" id="prova-social"><div class="section-head"><p class="eyebrow" data-i18n="prova.eyebrow">parcerias e experiências</p><h2 data-i18n="prova.titulo">Quem já trabalhou com a Fundev</h2></div><div class="prova-grid"><div><h3 data-i18n="prova.logosTitulo">Clientes e parceiros</h3><p class="placeholder" data-i18n="prova.logos">[PREENCHER: logos de clientes e parceiros autorizados]</p></div><div><h3 data-i18n="prova.depoimentosTitulo">Depoimentos</h3><p class="placeholder" data-i18n="prova.depoimentos">[PREENCHER: depoimentos autorizados, com nome e organização]</p></div></div></section>
+  <!-- <section class="prova-social" id="prova-social"><div class="section-head"><p class="eyebrow" data-i18n="prova.eyebrow">parcerias e experiências</p><h2 data-i18n="prova.titulo">Quem já trabalhou com a Fundev</h2></div><div class="prova-grid"><div><h3 data-i18n="prova.logosTitulo">Clientes e parceiros</h3><p class="placeholder" data-i18n="prova.logos">[PREENCHER: logos de clientes e parceiros autorizados]</p></div><div><h3 data-i18n="prova.depoimentosTitulo">Depoimentos</h3><p class="placeholder" data-i18n="prova.depoimentos">[PREENCHER: depoimentos autorizados, com nome e organização]</p></div></div></section> -->
 
   <!-- ============ SOBRE ============ -->
   <section class="sobre" id="sobre">
@@ -172,25 +188,25 @@
 
     <div class="value-grid">
       <article class="value-card">
-        <div class="value-icon" aria-hidden="true">🔥</div>
+        <img class="value-image" src="assets/games/tormenta-da-rosa.webp" alt="" aria-hidden="true" width="1200" height="675" loading="lazy">
         <h3 data-i18n="sobre.card1Titulo">Jogos autorais</h3>
         <p data-i18n-html="sobre.card1Texto">Criamos nossos próprios universos, mecânicas e histórias, da ideia no papel até a primeira build jogável.</p>
       </article>
 
       <article class="value-card value-card--nature">
-        <div class="value-icon" aria-hidden="true">🌿</div>
+        <img class="value-image" src="assets/games/pantany.webp" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy">
         <h3 data-i18n="sobre.card2Titulo">Impacto social</h3>
         <p data-i18n-html="sobre.card2Texto"><strong>Pantany</strong>, nosso projeto social, usa jogos para falar sobre a preservação do Pantanal, um dos biomas mais ricos e ameaçados do Brasil.</p>
       </article>
 
       <article class="value-card">
-        <div class="value-icon" aria-hidden="true">🧩</div>
+        <img class="value-image" src="assets/games/aventura-do-folclore.webp" alt="" aria-hidden="true" width="1200" height="675" loading="lazy">
         <h3 data-i18n="sobre.card3Titulo">Acessibilidade</h3>
         <p data-i18n-html="sobre.card3Texto"><strong>A Aventura do Folclore</strong> está sendo criada para crianças autistas de Mato Grosso, pensada desde o início para incluir.</p>
       </article>
 
       <article class="value-card">
-        <div class="value-icon" aria-hidden="true">💻</div>
+        <img class="value-image" src="assets/games/k.webp" alt="Identidade visual do aplicativo Kartou!." data-i18n-attr="alt:sobre.softwareImagemAlt" width="1200" height="675" loading="lazy">
         <h3 data-i18n="sobre.card4Titulo">Software sob medida</h3>
         <p data-i18n-html="sobre.card4Texto">Estamos dando os primeiros passos além dos jogos, desenvolvendo software sob encomenda: soluções digitais pensadas do zero para cada projeto.</p>
       </article>
@@ -255,7 +271,7 @@
         <label><span data-i18n="contato.prazo">Prazo desejado</span><input name="prazo" data-i18n-attr="placeholder:contato.prazoPlaceholder" placeholder="Ex.: mês/ano"></label>
         <label><span data-i18n="contato.mensagem">Mensagem</span><textarea name="mensagem" rows="4" required></textarea></label>
         <button class="btn btn-primary btn-full" type="submit" data-i18n="contato.enviar">Enviar por e-mail</button>
-        <p class="form-aviso" id="formAviso" aria-live="polite" data-i18n="contato.formAviso">O formulário abrirá seu aplicativo de e-mail.</p>
+        <p class="form-aviso" id="formAviso" aria-live="polite" data-i18n="contato.formAviso">O formulário abrirá uma nova mensagem no Gmail. Se necessário, entre na sua conta para continuar.</p>
       </form>
       </div>
     </div>
@@ -289,6 +305,7 @@
   </div>
 </div>
 
+<script defer src="js/formulario.js"></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

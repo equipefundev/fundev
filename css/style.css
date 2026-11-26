@@ -585,7 +585,7 @@ section{ position: relative; padding: 100px 24px; scroll-margin-top: 72px; }
 }
 .value-card:hover{ border-color: rgb(var(--rgb-acento) / 45%); transform: translateY(-3px); }
 .value-card--nature:hover{ border-color: var(--pantanal); }
-.value-icon{ font-size: 1.8rem; margin-bottom: 14px; }
+.value-image{ display: block; width: 100%; height: 180px; aspect-ratio: auto; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; }
 .value-card h3{ font-size: 1.2rem; margin-bottom: 8px; }
 .value-card p{ margin: 0; font-size: .96rem; }
 .value-card strong{ color: var(--ink); }
@@ -1222,8 +1222,10 @@ body.sem-rolagem{ overflow: hidden; }
 .solucao-card, .case-card, .processo-grid li, .prova-grid > div{
   background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius-md);
 }
-.solucao-card{ padding: 28px; }
-.solucao-icone{ display: block; font-size: 1.8rem; margin-bottom: 18px; }
+.solucao-card{ padding: 0 0 26px; overflow: hidden; }
+.solucao-card > h3, .solucao-card > p, .solucao-card > .text-link{ margin-left: 28px; margin-right: 28px; }
+.solucao-foto{ position: relative; margin: 0 0 22px; overflow: hidden; }
+.solucao-foto img{ display: block; width: 100%; height: 240px; aspect-ratio: auto; object-fit: cover; }
 .solucao-card h3, .processo-grid h3{ font-size: 1.25rem; }
 .solucao-card > p{ margin-bottom: 12px; }
 .solucao-para{ font-size: .9rem; }
@@ -1238,6 +1240,8 @@ body.sem-rolagem{ overflow: hidden; }
 .cases-grid--apps{ grid-template-columns: minmax(0, 1fr); }
 .case-card{ overflow: hidden; display: grid; grid-template-columns: minmax(150px, .65fr) 1fr; }
 .case-card > img{ width: 100%; height: 100%; min-height: 100%; object-fit: cover; background: var(--bg-void); }
+.case-card--kindling{ grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.case-card--kindling > img{ object-position: 72% center; }
 .case-content{ padding: 22px; }
 .case-content h4{ font: 700 1.25rem/1.2 var(--font-display); margin: 0 0 18px; }
 .case-content p{ font-size: .88rem; margin: 0 0 14px; }
@@ -1281,6 +1285,7 @@ body.sem-rolagem{ overflow: hidden; }
   .cases-grid, .prova-grid{ grid-template-columns: 1fr; }
   .case-card{ grid-template-columns: 1fr; }
   .case-card > img{ height: 210px; min-height: 0; object-fit: contain; }
+  .case-card--kindling > img{ height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 70% center; }
   .processo-grid{ grid-template-columns: 1fr; }
   .processo-grid li > span{ margin-bottom: 12px; }
   .contato-inner{ grid-template-columns: 1fr; }

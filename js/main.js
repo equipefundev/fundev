@@ -9,7 +9,6 @@ import { iniciarModal } from './modal.js';
 import { anoDoRodape, menuMobile, seletorDeIdioma, brasas, comecarNoTopo, ondaAoClicar } from './ui.js';
 import { icone } from './dom.js';
 import { entradaAoRolar } from './entrada.js';
-import { iniciarFormulario } from './formulario.js';
 
 let jogos = [], membros = [], configBiblioteca = {}, nomesIdioma = {};
 
@@ -60,7 +59,6 @@ async function iniciar() {
   anoDoRodape();
   brasas();
   ondaAoClicar();
-  iniciarFormulario();
 
   try {
     await carregarIdioma(detectarIdioma());

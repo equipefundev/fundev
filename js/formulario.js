@@ -1,23 +1,48 @@
-import { t } from './i18n.js';
-
-export function iniciarFormulario() {
+function iniciarFormulario() {
   const form = document.getElementById('formContato');
-  const email = document.querySelector('[data-site="contato.email"]')?.textContent.trim();
-  if (!form || !email) return;
+  const endereco = document.querySelector('[data-site="contato.email"]')?.textContent.trim();
+  if (!form || !endereco) return;
+
+  const rotulo = nome => form.querySelector(`[name="${nome}"]`)
+    ?.closest('label')?.querySelector('span')?.textContent.trim() || nome;
 
   form.addEventListener('submit', evento => {
     evento.preventDefault();
+
     const dados = new FormData(form);
-    const assunto = `Contato pelo site — ${dados.get('tipo')}`;
+    const tipo = form.elements.namedItem('tipo');
+    const tipoProjeto = tipo?.selectedOptions?.[0]?.textContent.trim() || dados.get('tipo');
     const corpo = [
-      `${t('contato.nome')}: ${dados.get('nome')}`,
-      `${t('contato.email')}: ${dados.get('email')}`,
-      `${t('contato.tipo')}: ${dados.get('tipo')}`,
-      `${t('contato.prazo')}: ${dados.get('prazo') || '—'}`,
+      `${rotulo('nome')}: ${dados.get('nome')}`,
+      `${rotulo('email')}: ${dados.get('email')}`,
+      `${rotulo('tipo')}: ${tipoProjeto}`,
+      `${rotulo('prazo')}: ${dados.get('prazo') || '—'}`,
       '',
-      `${t('contato.mensagem')}:`,
+      `${rotulo('mensagem')}:`,
       dados.get('mensagem')
     ].join('\n');
-    window.location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+
+    const gmail = new URL('https://mail.google.com/mail/');
+    gmail.search = new URLSearchParams({
+      view: 'cm',
+      fs: '1',
+      to: endereco,
+      su: `Contato pelo site — ${tipoProjeto}`,
+      body: corpo
+    }).toString();
+
+    const janela = window.open(gmail.href, '_blank');
+    if (janela) {
+      janela.opener = null;
+    } else {
+      // Se novas abas estiverem bloqueadas, abre o rascunho na aba atual.
+      window.location.assign(gmail.href);
+    }
   });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', iniciarFormulario, { once: true });
+} else {
+  iniciarFormulario();
 }
